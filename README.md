@@ -50,15 +50,9 @@ uv pip install -r requirements/edgebench.txt -r requirements/analysis.txt
 # 1. Offline tests. Tests that need the self-hosted model libraries are skipped in this environment.
 uv run python -m pytest tests -q
 
-# 2. Regenerate every data figure and table of the paper from the released results,
-#    and verify that all 56 files are byte-identical to the ones in the paper.
-uv run python scripts/paper_assets.py --check
-uv run python scripts/paper_assets.py            # writes them to paper_assets/figures/eb and paper_assets/tables/eb
+# 2. Rebuild the paper's figures and tables from the released results (written to paper_assets/)
+uv run python scripts/paper_assets.py
 ```
-
-`--check` prints `CHECK OK: all 56 figure and table files are byte-identical to the paper (SHA-256)`. The light
-environment runs 274 tests and skips 7 that need a model library. With the full environment of a self-hosted
-interpreter, all 314 tests run.
 
 The runner records the commit of the code in every run for provenance, so use a `git clone`. If you downloaded a ZIP
 archive, run `git init && git add -A && git commit -m snapshot` once before running tests or experiments.
