@@ -3,6 +3,8 @@
 EdgeIntent v1 is a benchmark of natural-language requests to edge services. Each request is paired with the typed
 intent contract it expresses. It has 8,280 cases in 23 generated conditions and 10 further conditions derived
 programmatically from verified text. Each condition has 300 test cases and 60 development cases.
+The same files are on Hugging Face as [datasets/OniReimu/Edge-Computing-JEV](https://huggingface.co/datasets/OniReimu/Edge-Computing-JEV),
+with one dataset config per condition.
 
 ## How the cases were made
 

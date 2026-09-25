@@ -5,6 +5,9 @@ Code, benchmark, and results for the paper
 > **Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration**
 > Delong Li, Xu Wang, Haochen Gong, Rui Lang, and Guangsheng Yu. University of Technology Sydney.
 
+The EdgeIntent v1 benchmark and the experiment results are also on Hugging Face:
+[datasets/OniReimu/Edge-Computing-JEV](https://huggingface.co/datasets/OniReimu/Edge-Computing-JEV).
+
 The paper places an interpreter in an edge-service admission path. The interpreter turns a natural-language
 request into a typed intent contract (service, locality, quality floor, urgency, and up to four further fields).
 Jev-1.13.0 (a hosted decision model) and two self-hosted decision models are compared with three hosted LLMs
