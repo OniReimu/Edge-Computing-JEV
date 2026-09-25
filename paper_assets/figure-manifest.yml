@@ -1,0 +1,739 @@
+# Provenance for every generated figure and table in the paper: generator, source CSV, columns, and filters.
+# Rebuild with `uv run scripts/paper_assets.py`; `--check` rebuilds into a temporary directory and verifies that
+# every file and this block are byte-identical. Paths are relative to this file.
+
+manifest_version: 1
+project_id: "jev-edge-orchestration"
+code_revision: ""   # filled by paper_assets.py per artifact
+
+artifacts:
+  # >>> paper_assets.py: generated block, rebuilt on every run; do not edit by hand
+  - artifact_id: "fig_rq1_a"
+    paper_path: "figures/eb/fig_rq1_a.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["latency_p50", "latency_p50_ci_low", "latency_p50_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ1a; role in {main, reference}; model in the 7-model roster (Rule excluded)"
+    plot_type: "line (log-y, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq1_b"
+    paper_path: "figures/eb/fig_rq1_b.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["em", "em_ci_low", "em_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ1a; role in {main, reference}; model in the 7-model roster (Rule excluded)"
+    plot_type: "line (95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq1_c"
+    paper_path: "figures/eb/fig_rq1_c.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["latency_p50", "latency_p50_ci_low", "latency_p50_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ1b; role in {main, reference}; model in the 7-model roster (Rule excluded); per-request value = column / k (k from condition name)"
+    plot_type: "line (log-x, log-y, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq1_d"
+    paper_path: "figures/eb/fig_rq1_d.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["rq1b_request_em", "rq1b_request_em_ci_low", "rq1b_request_em_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ1b; role in {main, reference}; model in the 7-model roster (Rule excluded)"
+    plot_type: "line (log-x, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq1_legend"
+    paper_path: "figures/eb/fig_rq1_legend.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq1"
+    paper_path: "figures/eb/fig_rq1.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper (4 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq2_a"
+    paper_path: "figures/eb/fig_rq2_a.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["em", "em_ci_low", "em_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ2; model in the 7-model roster"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq2_b"
+    paper_path: "figures/eb/fig_rq2_b.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["unsafe_rate", "unsafe_rate_ci_low", "unsafe_rate_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ2; model in the 7-model roster"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq2_c"
+    paper_path: "figures/eb/fig_rq2_c.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["spurious_rate", "spurious_rate_ci_low", "spurious_rate_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ2; model in the 7-model roster"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq2_d"
+    paper_path: "figures/eb/fig_rq2_d.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["latency_p50", "latency_p95", "flag_valid_lt_50"]
+    filters: "rq == RQ2; condition == clean; model in the 7-model roster"
+    plot_type: "bar + range (bar = p50, whisker to p95; raw latencies are not in the CSVs, so no box plot)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq2_legend"
+    paper_path: "figures/eb/fig_rq2_legend.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq2"
+    paper_path: "figures/eb/fig_rq2.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper (4 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq3_a"
+    paper_path: "figures/eb/fig_rq3_a.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["em", "em_ci_low", "em_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ3; condition in {F4,F6,F8}_medium; 7-model roster"
+    plot_type: "line (95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq3_b"
+    paper_path: "figures/eb/fig_rq3_b.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["latency_p50", "latency_p50_ci_low", "latency_p50_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ3; condition in {F4,F6,F8}_medium; 7-model roster"
+    plot_type: "line (log-y, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq3_c"
+    paper_path: "figures/eb/fig_rq3_c.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["output_tokens_median", "flag_valid_lt_50"]
+    filters: "rq == RQ3; condition in {F4,F6,F8}_medium; 7-model roster"
+    plot_type: "grouped bar (no CI column in CSV)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq3_d"
+    paper_path: "figures/eb/fig_rq3_d.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["em", "em_ci_low", "em_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ3; condition in F8_{low,medium,high}; 7-model roster"
+    plot_type: "line (95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq3_legend"
+    paper_path: "figures/eb/fig_rq3_legend.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq3"
+    paper_path: "figures/eb/fig_rq3.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper (4 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq4_a"
+    paper_path: "figures/eb/fig_rq4_a.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["seen_top1", "unseen_top1", "flag_valid_lt_50"]
+    filters: "rq == RQ4; condition in K4..K254; 7-model roster + MiniLM-Reranker + DistilBERT-Clf-All"
+    plot_type: "line (log-x; no CI band, 18 series)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq4_b"
+    paper_path: "figures/eb/fig_rq4_b.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["latency_p50", "latency_p50_ci_low", "latency_p50_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ4; condition in K4..K254; 7-model roster + MiniLM-Reranker + DistilBERT-Clf-All"
+    plot_type: "line (log-x, log-y, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq4_c"
+    paper_path: "figures/eb/fig_rq4_c.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["seen_top1", "seen_top1_ci_low", "seen_top1_ci_high", "unseen_top1", "unseen_top1_ci_low", "unseen_top1_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ4; condition in {churn25, churn50}; six + Qwen3.5-4B-JSON + MiniLM-Reranker + DistilBERT-Clf-Frozen + DistilBERT-Clf-Retrained"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq4_d"
+    paper_path: "figures/eb/fig_rq4_d.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["unsupported_f1", "flag_valid_lt_50"]
+    filters: "rq == RQ4; condition in K4..K254; 7-model roster + MiniLM-Reranker + DistilBERT-Clf-All"
+    plot_type: "line (log-x; no CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq4_legend"
+    paper_path: "figures/eb/fig_rq4_legend.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq4"
+    paper_path: "figures/eb/fig_rq4.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper (4 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_latency_a"
+    paper_path: "figures/eb/fig_comms_latency_a.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["p_gt_0_050", "p_gt_0_100", "p_gt_0_200", "p_gt_0_500", "p_gt_1_000", "p_gt_0_050_ci_low", "p_gt_0_050_ci_high", "p_gt_0_100_ci_low", "p_gt_0_100_ci_high", "p_gt_0_200_ci_low", "p_gt_0_200_ci_high", "p_gt_0_500_ci_low", "p_gt_0_500_ci_high", "p_gt_1_000_ci_low", "p_gt_1_000_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ2; condition == clean; 7-model roster"
+    plot_type: "line (log-x, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_latency_b"
+    paper_path: "figures/eb/fig_comms_latency_b.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["p_gt_0_050", "p_gt_0_100", "p_gt_0_200", "p_gt_0_500", "p_gt_1_000", "p_gt_0_050_ci_low", "p_gt_0_050_ci_high", "p_gt_0_100_ci_low", "p_gt_0_100_ci_high", "p_gt_0_200_ci_low", "p_gt_0_200_ci_high", "p_gt_0_500_ci_low", "p_gt_0_500_ci_high", "p_gt_1_000_ci_low", "p_gt_1_000_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ1a; condition == pad_16384; 7-model roster"
+    plot_type: "line (log-x, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_latency_legend"
+    paper_path: "figures/eb/fig_comms_latency_legend.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_latency"
+    paper_path: "figures/eb/fig_comms_latency.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure wrapper (2 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_efficiency_a"
+    paper_path: "figures/eb/fig_comms_efficiency_a.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["cost_usd_per_1000_correct", "flag_valid_lt_50"]
+    filters: "(rq, condition) in {RQ2/clean; RQ1a/pad_16384; RQ3/F8_high; RQ4/K254}; hosted models"
+    plot_type: "grouped bar (log-y; no CI column in CSV)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_efficiency_b"
+    paper_path: "figures/eb/fig_comms_efficiency_b.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["energy_j_per_decision", "flag_valid_lt_50"]
+    filters: "(rq, condition) in {RQ2/clean; RQ1a/pad_16384; RQ3/F8_high; RQ4/K254}; self-hosted models"
+    plot_type: "grouped bar (no CI column in CSV)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_efficiency_legend"
+    paper_path: "figures/eb/fig_comms_efficiency_legend.pdf"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_comms_efficiency"
+    paper_path: "figures/eb/fig_comms_efficiency.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure wrapper (2 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_corpus"
+    paper_path: "tables/eb/tab_corpus.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../data/edgebench/v1/stats.md", "../data/edgebench/v1/_yields.json"]
+    columns: ["N (test, dev)", "Length p5/p50/p95 (test)", "first_pass", "final"]
+    filters: "one row per condition; generated = present in _yields.json (23), derived otherwise (10); condition order from cells.csv"
+    plot_type: "table* (33 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq1a"
+    paper_path: "tables/eb/tab_rq1a.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv", "../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["em", "em_ci_low", "em_ci_high", "valid_rate", "macro_field_acc", "latency_p50", "latency_p95", "latency_p99", "output_tokens_median", "cost_usd_per_1000_correct", "energy_j_per_decision", "flag_valid_lt_50"]
+    filters: "rq == RQ1a; 7-model roster"
+    plot_type: "table* (35 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq1b"
+    paper_path: "tables/eb/tab_rq1b.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv", "../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["rq1b_request_em", "rq1b_request_em_ci_low", "rq1b_request_em_ci_high", "rq1b_message_all_correct", "latency_p50", "latency_p95", "cost_usd_per_1000_correct", "energy_j_per_decision", "flag_valid_lt_50"]
+    filters: "rq == RQ1b; 7-model roster; per-request p50 = latency_p50 / k"
+    plot_type: "table* (28 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq2"
+    paper_path: "tables/eb/tab_rq2.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["em", "macro_field_acc", "valid_rate", "unsafe_rate", "spurious_rate", "missed_rate", "latency_p50", "latency_p95", "em_ci_low", "em_ci_high", "flag_valid_lt_50"]
+    filters: "rq == RQ2; 7-model roster"
+    plot_type: "table* (56 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq2_contrasts"
+    paper_path: "tables/eb/tab_rq2_contrasts.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/contrasts.csv", "../experiments/EXP-2026-001/analysis/hypotheses.csv"]
+    columns: ["em_diff", "em_diff_ci_low", "em_diff_ci_high", "em_mcnemar_p", "unsafe_diff", "unsafe_diff_ci_low", "unsafe_diff_ci_high", "unsafe_mcnemar_p", "holm_p", "p_floor", "verdict", "flag_low_valid"]
+    filters: "contrasts: rq == RQ2, reference_model == Jev-1.13.0; hypotheses: hypothesis == H3_paired, joined on (model, level == condition); 'resolved' verdicts highlighted"
+    plot_type: "table* (40 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq3"
+    paper_path: "tables/eb/tab_rq3.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv"]
+    columns: ["em", "latency_p50", "output_tokens_median", "flag_valid_lt_50"]
+    filters: "rq == RQ3; 7-model roster; columns grouped by constraint density D"
+    plot_type: "table* (21 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq4a"
+    paper_path: "tables/eb/tab_rq4a.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv", "../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["seen_top1", "unseen_top1", "unsupported_f1", "rq4_false_admission_rate", "rq4_false_blocking_rate", "em", "valid_rate", "latency_p50", "latency_p95", "flag_valid_lt_50"]
+    filters: "rq == RQ4; condition in K4..K254; 7-model roster + MiniLM-Reranker + DistilBERT-Clf-All"
+    plot_type: "table* (45 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq4b"
+    paper_path: "tables/eb/tab_rq4b.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv", "../experiments/EXP-2026-001/analysis/hypotheses.csv", "../experiments/EXP-2026-001/analysis/h5_classifier_reference.csv"]
+    columns: ["seen_top1", "unseen_top1", "estimate", "ci_low", "ci_high", "gap", "gap_ci_low", "gap_ci_high", "added_labelled_examples", "training_wall_time_s", "flag_valid_lt_50", "flag_low_valid"]
+    filters: "rq == RQ4; condition in {churn25, churn50}; gap from hypotheses.csv H5 (interpreters, reranker) or h5_classifier_reference.csv (DistilBERT frozen / retrained)"
+    plot_type: "table (20 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_comms"
+    paper_path: "tables/eb/tab_comms.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/cells.csv", "../experiments/EXP-2026-001/analysis/comms.csv"]
+    columns: ["latency_p95", "latency_p99", "jitter_iqr_s", "p_gt_0_200", "p_gt_1_000", "availability", "goodput_correct_per_s", "sla_violation_rate", "request_bytes_median", "response_bytes_median", "cost_usd_per_1000_correct", "energy_j_per_decision", "flag_valid_lt_50"]
+    filters: "(rq, condition) in {RQ2/clean, RQ1a/pad_16384, RQ3/F8_high, RQ4/K254}; 7-model roster"
+    plot_type: "table* (28 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_hypotheses"
+    paper_path: "tables/eb/tab_hypotheses.tex"
+    experiment_id: "EXP-2026-001"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-001/analysis/hypotheses.csv"]
+    columns: ["hypothesis", "family", "contrast", "level", "estimate", "ci_low", "ci_high", "holm_p", "p_floor", "verdict", "flag_low_valid"]
+    filters: "hypothesis != H3_paired (those 40 rows are in tab_rq2_contrasts); 'resolved' verdicts highlighted; p_floor rows print the Holm value as an upper bound"
+    plot_type: "table* (59 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5a_a"
+    paper_path: "figures/eb/fig_rq5a_a.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["strict_completion", "strict_ci_low", "strict_ci_high"]
+    filters: "part == A; 7-model roster; cell in {load_1, load_2, load_4, load_8, load_16}"
+    plot_type: "line (log-x, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5a_b"
+    paper_path: "figures/eb/fig_rq5a_b.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["T_p95_completions", "T_p95_completions_ci_low", "T_p95_completions_ci_high"]
+    filters: "part == A; 7-model roster; cell in {load_1, load_2, load_4, load_8, load_16}"
+    plot_type: "line (log-x, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5a_c"
+    paper_path: "figures/eb/fig_rq5a_c.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["strict_completion", "strict_ci_low", "strict_ci_high"]
+    filters: "part == A; 7-model roster; cell in {deadline_0.5, deadline_1, load_4, deadline_4}"
+    plot_type: "line (log-x, 95% CI band)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5a_d"
+    paper_path: "figures/eb/fig_rq5a_d.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["strict_completion", "strict_ci_low", "strict_ci_high"]
+    filters: "part == A; 7-model roster; cell in {load_4, reuse_changing_on, reuse_repeated_off, reuse_repeated_on}"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5a_legend"
+    paper_path: "figures/eb/fig_rq5a_legend.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5a"
+    paper_path: "figures/eb/fig_rq5a.tex"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper (4 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5b_a"
+    paper_path: "figures/eb/fig_rq5b_a.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["operational_completion", "operational_ci_low", "operational_ci_high"]
+    filters: "part == B; 7-model roster; cache off (SC, SR, BC, BR)"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5b_b"
+    paper_path: "figures/eb/fig_rq5b_b.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["operational_completion", "operational_ci_low", "operational_ci_high"]
+    filters: "part == B; 7-model roster; cache on (SC, SR, BC, BR)"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5b_c"
+    paper_path: "figures/eb/fig_rq5b_c.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["T_p95_completions", "T_p95_completions_ci_low", "T_p95_completions_ci_high"]
+    filters: "part == B; 7-model roster; cache off (SC, SR, BC, BR)"
+    plot_type: "grouped bar (95% CI error bars)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5b_d"
+    paper_path: "figures/eb/fig_rq5b_d.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["mean_admission_wait_s", "mean_decision_s", "mean_execution_s", "mean_service_queue_s", "mean_transfer_s"]
+    filters: "part == B; 7-model roster; cell == steady_changing_off"
+    plot_type: "stacked bar"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5b_legend"
+    paper_path: "figures/eb/fig_rq5b_legend.pdf"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "legend strip"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "fig_rq5b"
+    paper_path: "figures/eb/fig_rq5b.tex"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: []
+    columns: []
+    filters: ""
+    plot_type: "figure* wrapper (4 panels)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq5a"
+    paper_path: "tables/eb/tab_rq5a.tex"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["strict_completion", "T_p95_completions"]
+    filters: "part == A; sweeps: load, deadline, topology, reuse, burstiness; 7-model roster"
+    plot_type: "table* (15 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  - artifact_id: "tab_rq5b"
+    paper_path: "tables/eb/tab_rq5b.tex"
+    experiment_id: "EXP-2026-002"
+    run_id: ""
+    source_data: ["../experiments/EXP-2026-002/analysis/cells.csv"]
+    columns: ["operational_completion", "T_p95_completions"]
+    filters: "part == B; operational conditions; 7-model roster"
+    plot_type: "table* (8 rows)"
+    generator: "../scripts/paper_assets.py"
+    code_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    paper_git_sha: "02c6462c22ae5a07320f2e58dcc730fd260c7d95"
+    status: "draft"
+
+  # <<< paper_assets.py

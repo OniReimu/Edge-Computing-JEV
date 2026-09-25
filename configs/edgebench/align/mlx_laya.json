@@ -1,0 +1,997 @@
+{
+  "model": "Laya",
+  "platform": "M4-Max",
+  "base_url": "http://127.0.0.1:8602",
+  "code_sha": "ae8f8486211da703e43ce2531be4baaf8eb7778e",
+  "date_utc": "2026-09-24T01:05:00Z",
+  "resolved_models": [
+    "laya-typed-decisions@bc76315b"
+  ],
+  "latency_p50_s": 0.07233266672119498,
+  "n": 20,
+  "valid": 20,
+  "em": 7,
+  "contract_sha256": "4a7d56d2e2084902c774de52755dddf9e95c55eaad4bb09f90d0380874a79cf7",
+  "cases": [
+    {
+      "case_id": "c01",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1246,
+            "detection": 0.3471,
+            "ocr": 0.2445,
+            "unsupported": 0.2838
+          },
+          "locality": {
+            "site_only": 0.6511,
+            "remote_allowed": 0.1487,
+            "unspecified": 0.2002
+          },
+          "quality_floor": {
+            "standard": 0.1008,
+            "high": 0.8107,
+            "unspecified": 0.0885
+          },
+          "urgency": {
+            "normal": 0.1264,
+            "urgent": 0.7124,
+            "unspecified": 0.1612
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.10435174964368343,
+      "request_sha256": "22cf81717a2d1734424de78353a12ab2c16871ebc76ff0c6543d1d15e3e1bd71"
+    },
+    {
+      "case_id": "c02",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.3598,
+            "detection": 0.1969,
+            "ocr": 0.1269,
+            "unsupported": 0.3163
+          },
+          "locality": {
+            "site_only": 0.1778,
+            "remote_allowed": 0.6074,
+            "unspecified": 0.2147
+          },
+          "quality_floor": {
+            "standard": 0.6979,
+            "high": 0.1191,
+            "unspecified": 0.183
+          },
+          "urgency": {
+            "normal": 0.6305,
+            "urgent": 0.0914,
+            "unspecified": 0.2781
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.07224091701209545,
+      "request_sha256": "5e054e828660f0febb6e6b031b37d686e3e73da776bfeb6226bfefbd5d35d3f5"
+    },
+    {
+      "case_id": "c03",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1196,
+            "detection": 0.5847,
+            "ocr": 0.1032,
+            "unsupported": 0.1925
+          },
+          "locality": {
+            "site_only": 0.3905,
+            "remote_allowed": 0.2493,
+            "unspecified": 0.3602
+          },
+          "quality_floor": {
+            "standard": 0.6424,
+            "high": 0.2499,
+            "unspecified": 0.1078
+          },
+          "urgency": {
+            "normal": 0.2324,
+            "urgent": 0.6228,
+            "unspecified": 0.1448
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.07305741682648659,
+      "request_sha256": "cc88a334ee2e54b37e8d881fecfe14685835e7a53ac6c8bafc9cf8a8b9846268"
+    },
+    {
+      "case_id": "c04",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0919,
+            "detection": 0.1097,
+            "ocr": 0.5337,
+            "unsupported": 0.2647
+          },
+          "locality": {
+            "site_only": 0.2416,
+            "remote_allowed": 0.2598,
+            "unspecified": 0.4986
+          },
+          "quality_floor": {
+            "standard": 0.4519,
+            "high": 0.1714,
+            "unspecified": 0.3767
+          },
+          "urgency": {
+            "normal": 0.4889,
+            "urgent": 0.1456,
+            "unspecified": 0.3655
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.1389320008456707,
+      "request_sha256": "8fc638218e638327d4efa00006651687b2b6c6e44296ecdb5021f83a25798327"
+    },
+    {
+      "case_id": "c05",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0739,
+            "detection": 0.1124,
+            "ocr": 0.5426,
+            "unsupported": 0.2711
+          },
+          "locality": {
+            "site_only": 0.1922,
+            "remote_allowed": 0.5146,
+            "unspecified": 0.2932
+          },
+          "quality_floor": {
+            "standard": 0.7396,
+            "high": 0.0837,
+            "unspecified": 0.1766
+          },
+          "urgency": {
+            "normal": 0.5482,
+            "urgent": 0.1495,
+            "unspecified": 0.3024
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.05548062548041344,
+      "request_sha256": "065f1361c4f9397715e6dc3c1a1db41607315a029c38108a05e5424c2b02558b"
+    },
+    {
+      "case_id": "c06",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0844,
+            "detection": 0.4056,
+            "ocr": 0.184,
+            "unsupported": 0.326
+          },
+          "locality": {
+            "site_only": 0.5571,
+            "remote_allowed": 0.1915,
+            "unspecified": 0.2514
+          },
+          "quality_floor": {
+            "standard": 0.2785,
+            "high": 0.5185,
+            "unspecified": 0.203
+          },
+          "urgency": {
+            "normal": 0.3563,
+            "urgent": 0.4003,
+            "unspecified": 0.2433
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.07278749998658895,
+      "request_sha256": "78cb03cdb1d92e67507520c704b4a0089de0c689de817c8fd286defcd237df92"
+    },
+    {
+      "case_id": "c07",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.5002,
+            "detection": 0.1471,
+            "ocr": 0.1579,
+            "unsupported": 0.1948
+          },
+          "locality": {
+            "site_only": 0.3798,
+            "remote_allowed": 0.2566,
+            "unspecified": 0.3636
+          },
+          "quality_floor": {
+            "standard": 0.3572,
+            "high": 0.4783,
+            "unspecified": 0.1646
+          },
+          "urgency": {
+            "normal": 0.1061,
+            "urgent": 0.7933,
+            "unspecified": 0.1006
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.08319445978850126,
+      "request_sha256": "b796f8ee35e4d32954ddaea8c93c670731f2ea5775747174744cfd391840ddb7"
+    },
+    {
+      "case_id": "c08",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "unspecified",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0981,
+            "detection": 0.4209,
+            "ocr": 0.1621,
+            "unsupported": 0.3188
+          },
+          "locality": {
+            "site_only": 0.2805,
+            "remote_allowed": 0.2399,
+            "unspecified": 0.4795
+          },
+          "quality_floor": {
+            "standard": 0.3363,
+            "high": 0.4185,
+            "unspecified": 0.2451
+          },
+          "urgency": {
+            "normal": 0.1156,
+            "urgent": 0.74,
+            "unspecified": 0.1444
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.07561262417584658,
+      "request_sha256": "9433b9851ff1652a1824193eb7289520eab27e4ffbfa985d786b73d649f113a8"
+    },
+    {
+      "case_id": "c09",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1407,
+            "detection": 0.3522,
+            "ocr": 0.2011,
+            "unsupported": 0.3061
+          },
+          "locality": {
+            "site_only": 0.1463,
+            "remote_allowed": 0.7076,
+            "unspecified": 0.146
+          },
+          "quality_floor": {
+            "standard": 0.8252,
+            "high": 0.066,
+            "unspecified": 0.1088
+          },
+          "urgency": {
+            "normal": 0.6266,
+            "urgent": 0.1387,
+            "unspecified": 0.2348
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.05478233378380537,
+      "request_sha256": "03d2239f3df837d951cf97ce6801794137ce1184d35d8e9f00ae979da58f40ac"
+    },
+    {
+      "case_id": "c10",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1684,
+            "detection": 0.285,
+            "ocr": 0.1246,
+            "unsupported": 0.422
+          },
+          "locality": {
+            "site_only": 0.4644,
+            "remote_allowed": 0.2612,
+            "unspecified": 0.2743
+          },
+          "quality_floor": {
+            "standard": 0.1907,
+            "high": 0.6294,
+            "unspecified": 0.1798
+          },
+          "urgency": {
+            "normal": 0.4027,
+            "urgent": 0.2773,
+            "unspecified": 0.32
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.09783300012350082,
+      "request_sha256": "5590c6eada7986741eb42cb432ca89b52c69c70e1dbe143575b453838c5245a8"
+    },
+    {
+      "case_id": "c11",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1606,
+            "detection": 0.211,
+            "ocr": 0.1658,
+            "unsupported": 0.4626
+          },
+          "locality": {
+            "site_only": 0.2361,
+            "remote_allowed": 0.2437,
+            "unspecified": 0.5202
+          },
+          "quality_floor": {
+            "standard": 0.4582,
+            "high": 0.1889,
+            "unspecified": 0.3529
+          },
+          "urgency": {
+            "normal": 0.4725,
+            "urgent": 0.1862,
+            "unspecified": 0.3413
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.06352708302438259,
+      "request_sha256": "e24be37215007c3b55d51878e60bfc0a5e9841cf1253ce4de707bda46c20f964"
+    },
+    {
+      "case_id": "c12",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0839,
+            "detection": 0.6561,
+            "ocr": 0.1302,
+            "unsupported": 0.1297
+          },
+          "locality": {
+            "site_only": 0.4601,
+            "remote_allowed": 0.2678,
+            "unspecified": 0.2722
+          },
+          "quality_floor": {
+            "standard": 0.3072,
+            "high": 0.5194,
+            "unspecified": 0.1734
+          },
+          "urgency": {
+            "normal": 0.1531,
+            "urgent": 0.6762,
+            "unspecified": 0.1707
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.0702947499230504,
+      "request_sha256": "fccf01d59a4fad13feba5f304e7ad601421fa699e8a3d4e3fec4668a3acd1657"
+    },
+    {
+      "case_id": "c13",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1605,
+            "detection": 0.2555,
+            "ocr": 0.1927,
+            "unsupported": 0.3913
+          },
+          "locality": {
+            "site_only": 0.2055,
+            "remote_allowed": 0.3589,
+            "unspecified": 0.4357
+          },
+          "quality_floor": {
+            "standard": 0.7042,
+            "high": 0.1256,
+            "unspecified": 0.1702
+          },
+          "urgency": {
+            "normal": 0.6026,
+            "urgent": 0.2221,
+            "unspecified": 0.1753
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.0745534161105752,
+      "request_sha256": "88704535cb5b5f17a086ac7158d1bb88dde6a5d426f1294ca3457295ee28e242"
+    },
+    {
+      "case_id": "c14",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.6278,
+            "detection": 0.1823,
+            "ocr": 0.0667,
+            "unsupported": 0.1231
+          },
+          "locality": {
+            "site_only": 0.1745,
+            "remote_allowed": 0.5794,
+            "unspecified": 0.2462
+          },
+          "quality_floor": {
+            "standard": 0.5639,
+            "high": 0.2023,
+            "unspecified": 0.2338
+          },
+          "urgency": {
+            "normal": 0.534,
+            "urgent": 0.1931,
+            "unspecified": 0.2729
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "unspecified",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.053907000459730625,
+      "request_sha256": "7124ebb51705e952150ca9593a92c893180dd62d8e2618d7356871e34a6eebad"
+    },
+    {
+      "case_id": "c15",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0968,
+            "detection": 0.5371,
+            "ocr": 0.0959,
+            "unsupported": 0.2702
+          },
+          "locality": {
+            "site_only": 0.7127,
+            "remote_allowed": 0.118,
+            "unspecified": 0.1693
+          },
+          "quality_floor": {
+            "standard": 0.2196,
+            "high": 0.5897,
+            "unspecified": 0.1906
+          },
+          "urgency": {
+            "normal": 0.092,
+            "urgent": 0.7828,
+            "unspecified": 0.1252
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.07242441643029451,
+      "request_sha256": "0d193a07b72f88b82df3110314789116c225f6cf15668a2365435ee5d443a398"
+    },
+    {
+      "case_id": "c16",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1344,
+            "detection": 0.2021,
+            "ocr": 0.2238,
+            "unsupported": 0.4397
+          },
+          "locality": {
+            "site_only": 0.2366,
+            "remote_allowed": 0.2117,
+            "unspecified": 0.5517
+          },
+          "quality_floor": {
+            "standard": 0.4624,
+            "high": 0.1772,
+            "unspecified": 0.3604
+          },
+          "urgency": {
+            "normal": 0.4795,
+            "urgent": 0.1833,
+            "unspecified": 0.3372
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.1173733752220869,
+      "request_sha256": "be469614d9c14ef04ce830601533f69830f5abae22010f5371236dec2d800679"
+    },
+    {
+      "case_id": "c17",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.1156,
+            "detection": 0.1915,
+            "ocr": 0.4661,
+            "unsupported": 0.2267
+          },
+          "locality": {
+            "site_only": 0.5574,
+            "remote_allowed": 0.1807,
+            "unspecified": 0.2619
+          },
+          "quality_floor": {
+            "standard": 0.2381,
+            "high": 0.5916,
+            "unspecified": 0.1704
+          },
+          "urgency": {
+            "normal": 0.5287,
+            "urgent": 0.2378,
+            "unspecified": 0.2335
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.05542683228850365,
+      "request_sha256": "8cf7d70292ca919dd8b192593f879b6cc3f0faadf775d89e9ef1e8af32eb3761"
+    },
+    {
+      "case_id": "c18",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0815,
+            "detection": 0.6789,
+            "ocr": 0.0754,
+            "unsupported": 0.1643
+          },
+          "locality": {
+            "site_only": 0.2365,
+            "remote_allowed": 0.3639,
+            "unspecified": 0.3995
+          },
+          "quality_floor": {
+            "standard": 0.6069,
+            "high": 0.2335,
+            "unspecified": 0.1597
+          },
+          "urgency": {
+            "normal": 0.214,
+            "urgent": 0.6432,
+            "unspecified": 0.1428
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.05283112544566393,
+      "request_sha256": "8572836656abb8dc77f2070647566d717c06f32cca1e546f310c2430f730cf2e"
+    },
+    {
+      "case_id": "c19",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0973,
+            "detection": 0.1956,
+            "ocr": 0.4207,
+            "unsupported": 0.2864
+          },
+          "locality": {
+            "site_only": 0.1345,
+            "remote_allowed": 0.678,
+            "unspecified": 0.1875
+          },
+          "quality_floor": {
+            "standard": 0.3938,
+            "high": 0.4446,
+            "unspecified": 0.1616
+          },
+          "urgency": {
+            "normal": 0.5114,
+            "urgent": 0.32,
+            "unspecified": 0.1686
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.05326954089105129,
+      "request_sha256": "3e9bbb0799018138b950b24084185a9bff13d77a66f9ed2a331b01cec34eb245"
+    },
+    {
+      "case_id": "c20",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.2492,
+            "detection": 0.1739,
+            "ocr": 0.1356,
+            "unsupported": 0.4413
+          },
+          "locality": {
+            "site_only": 0.2275,
+            "remote_allowed": 0.2483,
+            "unspecified": 0.5242
+          },
+          "quality_floor": {
+            "standard": 0.8227,
+            "high": 0.0744,
+            "unspecified": 0.103
+          },
+          "urgency": {
+            "normal": 0.6878,
+            "urgent": 0.1002,
+            "unspecified": 0.212
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "laya-typed-decisions@bc76315b",
+      "latency_s": 0.06707870867103338,
+      "request_sha256": "ade988d9fbaf0d2bd84312ad0154e5472e481c0f660137739e1503b59034f55b"
+    }
+  ]
+}

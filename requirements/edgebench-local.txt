@@ -1,0 +1,35 @@
+# Heavy local-model dependencies for Edgebench self-hosted interpreters (SemIf, Laya, Qwen3.5-4B-JSON)
+torch==2.10.0
+transformers==5.17.0
+accelerate==1.12.0
+safetensors==0.8.0
+tokenizers==0.23.2
+huggingface-hub==1.31.0
+mlx==0.32.2
+mlx-metal==0.32.2
+mlx-lm @ git+https://github.com/ml-explore/mlx-lm.git@a63e24c389382619eb6d9af656e3b46024be217a
+laya==0.3.11
+# JSON-schema constrained decoding for Qwen3.5-4B-JSON (same pins as requirements/edgebench-cuda.txt)
+outlines==1.3.3
+outlines-core==0.2.14
+annotated-types==0.8.0
+cloudpickle==3.1.2
+diskcache==5.6.3
+genson==1.4.0
+pydantic==2.13.5
+pydantic-core==2.46.5
+typing-inspection==0.4.4
+semif-phase1[mlx] @ git+https://github.com/TheoLeeCJ/SemIf-OpenJev@23cf1f39fc9534fe81437200959b6dfc7106e45a
+protobuf==7.36.1
+sentencepiece==0.2.1
+psutil==7.2.2
+filelock==4.0.1
+fsspec==2026.9.0
+jinja2==3.1.6
+mpmath==1.3.0
+networkx==3.7
+regex==2026.9.10
+sympy==1.14.0
+tqdm==4.70.1
+typer==0.27.2
+typing-extensions==4.16.0

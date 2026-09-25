@@ -1,0 +1,19 @@
+# Environments and caches
+.venv/
+.venv-*/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# Credentials
+.env
+*.env
+
+# Run outputs, downloads, and regenerated assets
+runs/
+data/external/
+paper_assets/figures/
+paper_assets/tables/
+testbed-verify.json
+PROVENANCE.json

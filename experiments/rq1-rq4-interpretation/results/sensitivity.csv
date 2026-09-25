@@ -1,0 +1,12 @@
+model,rq,condition,metric_id,metric_name,primary_run,sensitivity_rerun1,delta_rerun_minus_primary
+GLM-5.3-Flash,RQ3,F4_low,n,n,300,300,+0.0000
+GLM-5.3-Flash,RQ3,F4_low,em,EM,0.8966666666666666,0.96,+0.0633
+GLM-5.3-Flash,RQ3,F4_low,em_ci95,EM 95% CI,"[0.8600, 0.9300]","[0.9367, 0.9800]",
+GLM-5.3-Flash,RQ3,F4_low,macro_field_accuracy,Macro Field Acc,0.9341666666666667,0.99,+0.0558
+GLM-5.3-Flash,RQ3,F4_low,valid_rate,Valid Rate,0.9466666666666667,1.0,+0.0533
+GLM-5.3-Flash,RQ3,F4_low,unsafe_rate,Unsafe Rate,0.0033333333333333335,0.006666666666666667,+0.0033
+GLM-5.3-Flash,RQ3,F4_low,spurious_rate,Spurious Rate,0.0033333333333333335,0.006666666666666667,+0.0033
+GLM-5.3-Flash,RQ3,F4_low,missed_rate,Missed Rate,0.07333333333333333,0.01,-0.0633
+GLM-5.3-Flash,RQ3,F4_low,latency_p50,Latency p50 (s),0.915905062109232,0.6727276877500117,-0.2432
+GLM-5.3-Flash,RQ3,F4_low,latency_p95,Latency p95 (s),2.9570215418934827,1.4410958422347964,-1.5159
+GLM-5.3-Flash,RQ3,F4_low,latency_p99,Latency p99 (s),5.727907307110719,2.770422336244952,-2.9575

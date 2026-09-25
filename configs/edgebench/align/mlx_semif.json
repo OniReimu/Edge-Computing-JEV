@@ -1,0 +1,997 @@
+{
+  "model": "SemIf-Qwen3.5-4B",
+  "platform": "M4-Max",
+  "base_url": "http://127.0.0.1:8601",
+  "code_sha": "ae8f8486211da703e43ce2531be4baaf8eb7778e",
+  "date_utc": "2026-09-24T01:04:54Z",
+  "resolved_models": [
+    "semif-qwen3.5-4b@23cf1f39"
+  ],
+  "latency_p50_s": 0.45934027060866356,
+  "n": 20,
+  "valid": 20,
+  "em": 17,
+  "contract_sha256": "4a7d56d2e2084902c774de52755dddf9e95c55eaad4bb09f90d0380874a79cf7",
+  "cases": [
+    {
+      "case_id": "c01",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.06697656222669933,
+            "detection": 0.002942744768878505,
+            "ocr": 0.9245829219862101,
+            "unsupported": 0.005497771018212087
+          },
+          "locality": {
+            "site_only": 0.9922468810121489,
+            "remote_allowed": 0.0045950146695690934,
+            "unspecified": 0.00315810431828208
+          },
+          "quality_floor": {
+            "standard": 0.0024721214018509066,
+            "high": 0.9973249545162801,
+            "unspecified": 0.0002029240818690424
+          },
+          "urgency": {
+            "normal": 0.007571194644146353,
+            "urgent": 0.9916308073113538,
+            "unspecified": 0.0007979980444999661
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.480557375587523,
+      "request_sha256": "22cf81717a2d1734424de78353a12ab2c16871ebc76ff0c6543d1d15e3e1bd71"
+    },
+    {
+      "case_id": "c02",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.9831940072393852,
+            "detection": 0.00662470911059743,
+            "ocr": 0.0016749887738474758,
+            "unsupported": 0.008506294876169943
+          },
+          "locality": {
+            "site_only": 0.010966005845918503,
+            "remote_allowed": 0.9871283880743357,
+            "unspecified": 0.0019056060797458926
+          },
+          "quality_floor": {
+            "standard": 0.812262041960824,
+            "high": 0.027794078651890913,
+            "unspecified": 0.15994387938728521
+          },
+          "urgency": {
+            "normal": 0.8118320591064397,
+            "urgent": 0.007023723531510732,
+            "unspecified": 0.18114421736204944
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4675977500155568,
+      "request_sha256": "5e054e828660f0febb6e6b031b37d686e3e73da776bfeb6226bfefbd5d35d3f5"
+    },
+    {
+      "case_id": "c03",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.05324701189698146,
+            "detection": 0.9438258690745102,
+            "ocr": 0.001105106475674863,
+            "unsupported": 0.0018220125528336005
+          },
+          "locality": {
+            "site_only": 0.9986591757174101,
+            "remote_allowed": 0.0009106592920722449,
+            "unspecified": 0.0004301649905177392
+          },
+          "quality_floor": {
+            "standard": 0.9801776358952189,
+            "high": 0.012338615503501696,
+            "unspecified": 0.00748374860127941
+          },
+          "urgency": {
+            "normal": 0.005217889859007031,
+            "urgent": 0.9943537996590968,
+            "unspecified": 0.00042831048189624757
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4670619582757354,
+      "request_sha256": "cc88a334ee2e54b37e8d881fecfe14685835e7a53ac6c8bafc9cf8a8b9846268"
+    },
+    {
+      "case_id": "c04",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.2909804267197206,
+            "detection": 0.0041506128696705115,
+            "ocr": 0.006843203724667471,
+            "unsupported": 0.6980257566859414
+          },
+          "locality": {
+            "site_only": 0.14603620148037275,
+            "remote_allowed": 0.013583482686962408,
+            "unspecified": 0.8403803158326649
+          },
+          "quality_floor": {
+            "standard": 0.03708632908050384,
+            "high": 0.006444637652420072,
+            "unspecified": 0.9564690332670761
+          },
+          "urgency": {
+            "normal": 0.10497307359076481,
+            "urgent": 0.016098142220121972,
+            "unspecified": 0.8789287841891131
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4407510422170162,
+      "request_sha256": "8fc638218e638327d4efa00006651687b2b6c6e44296ecdb5021f83a25798327"
+    },
+    {
+      "case_id": "c05",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.022960398292005,
+            "detection": 0.0005399768117841193,
+            "ocr": 0.9763009785284462,
+            "unsupported": 0.00019864636776467887
+          },
+          "locality": {
+            "site_only": 0.04692926104148601,
+            "remote_allowed": 0.9425994054266796,
+            "unspecified": 0.010471333531834241
+          },
+          "quality_floor": {
+            "standard": 0.9464990683543237,
+            "high": 0.011914664904775487,
+            "unspecified": 0.041586266740900886
+          },
+          "urgency": {
+            "normal": 0.9884139445284121,
+            "urgent": 0.004039421877878321,
+            "unspecified": 0.00754663359370945
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.46634354162961245,
+      "request_sha256": "065f1361c4f9397715e6dc3c1a1db41607315a029c38108a05e5424c2b02558b"
+    },
+    {
+      "case_id": "c06",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.4893596180396611,
+            "detection": 0.43185834716998167,
+            "ocr": 0.0037363067906381357,
+            "unsupported": 0.07504572799971909
+          },
+          "locality": {
+            "site_only": 0.9905376116265782,
+            "remote_allowed": 0.005889951938492374,
+            "unspecified": 0.0035724364349294835
+          },
+          "quality_floor": {
+            "standard": 0.029263837643479295,
+            "high": 0.9690852096096103,
+            "unspecified": 0.001650952746910419
+          },
+          "urgency": {
+            "normal": 0.9848365344778491,
+            "urgent": 0.0027662031405980077,
+            "unspecified": 0.012397262381552919
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.46591699961572886,
+      "request_sha256": "78cb03cdb1d92e67507520c704b4a0089de0c689de817c8fd286defcd237df92"
+    },
+    {
+      "case_id": "c07",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.9610773898823699,
+            "detection": 0.005043271286444957,
+            "ocr": 0.0009930789975230872,
+            "unsupported": 0.03288625983366211
+          },
+          "locality": {
+            "site_only": 0.041817820558702354,
+            "remote_allowed": 0.006412970485306967,
+            "unspecified": 0.9517692089559907
+          },
+          "quality_floor": {
+            "standard": 0.11706296879184525,
+            "high": 0.017952187697842324,
+            "unspecified": 0.8649848435103125
+          },
+          "urgency": {
+            "normal": 0.015882892576759254,
+            "urgent": 0.9826397682830256,
+            "unspecified": 0.0014773391402151006
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4429859574884176,
+      "request_sha256": "b796f8ee35e4d32954ddaea8c93c670731f2ea5775747174744cfd391840ddb7"
+    },
+    {
+      "case_id": "c08",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.08389022269455977,
+            "detection": 0.005362922513017606,
+            "ocr": 0.9019048903720939,
+            "unsupported": 0.008841964420328712
+          },
+          "locality": {
+            "site_only": 0.08351328116639598,
+            "remote_allowed": 0.01863433180117878,
+            "unspecified": 0.8978523870324252
+          },
+          "quality_floor": {
+            "standard": 0.26856231005645526,
+            "high": 0.16289127509249063,
+            "unspecified": 0.5685464148510542
+          },
+          "urgency": {
+            "normal": 0.0028005823158605042,
+            "urgent": 0.9970763686848206,
+            "unspecified": 0.0001230489993188516
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4412137493491173,
+      "request_sha256": "9433b9851ff1652a1824193eb7289520eab27e4ffbfa985d786b73d649f113a8"
+    },
+    {
+      "case_id": "c09",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.18018694035281632,
+            "detection": 0.8075418411968738,
+            "ocr": 0.0033002389319680683,
+            "unsupported": 0.008970979518341889
+          },
+          "locality": {
+            "site_only": 0.005903282793773995,
+            "remote_allowed": 0.9927795167710498,
+            "unspecified": 0.0013172004351762617
+          },
+          "quality_floor": {
+            "standard": 0.9851567473021344,
+            "high": 0.002441959431732715,
+            "unspecified": 0.012401293266132873
+          },
+          "urgency": {
+            "normal": 0.793351907749351,
+            "urgent": 0.006057316564378592,
+            "unspecified": 0.20059077568627043
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.44274991657584906,
+      "request_sha256": "03d2239f3df837d951cf97ce6801794137ce1184d35d8e9f00ae979da58f40ac"
+    },
+    {
+      "case_id": "c10",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "unspecified"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.6689198099289411,
+            "detection": 0.07989107843222333,
+            "ocr": 0.005107265773669363,
+            "unsupported": 0.24608184586516627
+          },
+          "locality": {
+            "site_only": 0.9976454787842113,
+            "remote_allowed": 0.0010308647174352167,
+            "unspecified": 0.0013236564983534452
+          },
+          "quality_floor": {
+            "standard": 0.001700377026898855,
+            "high": 0.9980965418976062,
+            "unspecified": 0.00020308107549507
+          },
+          "urgency": {
+            "normal": 0.3363182997146431,
+            "urgent": 0.10918656582012386,
+            "unspecified": 0.5544951344652329
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.44172854255884886,
+      "request_sha256": "5590c6eada7986741eb42cb432ca89b52c69c70e1dbe143575b453838c5245a8"
+    },
+    {
+      "case_id": "c11",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.04196314238766559,
+            "detection": 0.002089221838985116,
+            "ocr": 0.000870917235355783,
+            "unsupported": 0.9550767185379935
+          },
+          "locality": {
+            "site_only": 0.041741790116420166,
+            "remote_allowed": 0.008219445817846165,
+            "unspecified": 0.9500387640657337
+          },
+          "quality_floor": {
+            "standard": 0.03708632908050384,
+            "high": 0.006444637652420072,
+            "unspecified": 0.9564690332670761
+          },
+          "urgency": {
+            "normal": 0.10517201503645543,
+            "urgent": 0.014233484443523983,
+            "unspecified": 0.8805945005200205
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.44148433301597834,
+      "request_sha256": "e24be37215007c3b55d51878e60bfc0a5e9841cf1253ce4de707bda46c20f964"
+    },
+    {
+      "case_id": "c12",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.017973579553794052,
+            "detection": 0.9813241931107014,
+            "ocr": 0.0003730297428592633,
+            "unsupported": 0.0003291975926452279
+          },
+          "locality": {
+            "site_only": 0.9916290967440803,
+            "remote_allowed": 0.006681544296612608,
+            "unspecified": 0.001689358959307041
+          },
+          "quality_floor": {
+            "standard": 0.014029340850350772,
+            "high": 0.9835327252660734,
+            "unspecified": 0.002437933883575875
+          },
+          "urgency": {
+            "normal": 0.0028002831425810288,
+            "urgent": 0.9969698556195138,
+            "unspecified": 0.00022986123790529075
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4666523337364197,
+      "request_sha256": "fccf01d59a4fad13feba5f304e7ad601421fa699e8a3d4e3fec4668a3acd1657"
+    },
+    {
+      "case_id": "c13",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.49598399163997176,
+            "detection": 0.007074831671871688,
+            "ocr": 0.059236840334337675,
+            "unsupported": 0.43770433635381895
+          },
+          "locality": {
+            "site_only": 0.03639324167552832,
+            "remote_allowed": 0.9385940735004322,
+            "unspecified": 0.025012684824039413
+          },
+          "quality_floor": {
+            "standard": 0.9895286599448979,
+            "high": 0.0019102396945064905,
+            "unspecified": 0.008561100360595661
+          },
+          "urgency": {
+            "normal": 0.9483904981069294,
+            "urgent": 0.0043919193243883055,
+            "unspecified": 0.047217582568682234
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.443469999358058,
+      "request_sha256": "88704535cb5b5f17a086ac7158d1bb88dde6a5d426f1294ca3457295ee28e242"
+    },
+    {
+      "case_id": "c14",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "unspecified",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.9615199996524094,
+            "detection": 0.007341295790664343,
+            "ocr": 0.0021033164591948562,
+            "unsupported": 0.029035388097731357
+          },
+          "locality": {
+            "site_only": 0.0255023891357566,
+            "remote_allowed": 0.9569700922276826,
+            "unspecified": 0.017527518636560876
+          },
+          "quality_floor": {
+            "standard": 0.09397532814013337,
+            "high": 0.014411583331171426,
+            "unspecified": 0.8916130885286953
+          },
+          "urgency": {
+            "normal": 0.9840633834316048,
+            "urgent": 0.003549086722187339,
+            "unspecified": 0.012387529846207909
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "remote_allowed",
+          "quality_floor": "unspecified",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.44584483467042446,
+      "request_sha256": "7124ebb51705e952150ca9593a92c893180dd62d8e2618d7356871e34a6eebad"
+    },
+    {
+      "case_id": "c15",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "site_only",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.7125936388071544,
+            "detection": 0.2621485496267006,
+            "ocr": 0.0037393482307801567,
+            "unsupported": 0.021518463335364783
+          },
+          "locality": {
+            "site_only": 0.9919319149768719,
+            "remote_allowed": 0.005898242769274077,
+            "unspecified": 0.002169842253854048
+          },
+          "quality_floor": {
+            "standard": 0.13061387575126962,
+            "high": 0.017676665869429814,
+            "unspecified": 0.8517094583793006
+          },
+          "urgency": {
+            "normal": 0.0046080334819356885,
+            "urgent": 0.9950581616922272,
+            "unspecified": 0.00033380482583711705
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "site_only",
+          "quality_floor": "unspecified",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.45057491678744555,
+      "request_sha256": "0d193a07b72f88b82df3110314789116c225f6cf15668a2365435ee5d443a398"
+    },
+    {
+      "case_id": "c16",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.08470304589987777,
+            "detection": 0.0032842935057017493,
+            "ocr": 0.00136909722400384,
+            "unsupported": 0.9106435633704166
+          },
+          "locality": {
+            "site_only": 0.014045254150135186,
+            "remote_allowed": 0.0013064121406087758,
+            "unspecified": 0.9846483337092561
+          },
+          "quality_floor": {
+            "standard": 0.041877225247388114,
+            "high": 0.005001521314069574,
+            "unspecified": 0.9531212534385423
+          },
+          "urgency": {
+            "normal": 0.08434254522917452,
+            "urgent": 0.008889638864728964,
+            "unspecified": 0.9067678159060966
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "unsupported",
+          "locality": "unspecified",
+          "quality_floor": "unspecified",
+          "urgency": "unspecified"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.45276354160159826,
+      "request_sha256": "be469614d9c14ef04ce830601533f69830f5abae22010f5371236dec2d800679"
+    },
+    {
+      "case_id": "c17",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.21302365786140476,
+            "detection": 0.006432757074465632,
+            "ocr": 0.743525623989315,
+            "unsupported": 0.037017961074814726
+          },
+          "locality": {
+            "site_only": 0.9966528701639269,
+            "remote_allowed": 0.00218016930139507,
+            "unspecified": 0.0011669605346779743
+          },
+          "quality_floor": {
+            "standard": 0.005909873491820039,
+            "high": 0.9938879017578298,
+            "unspecified": 0.00020222475035007697
+          },
+          "urgency": {
+            "normal": 0.8579768106084573,
+            "urgent": 0.02590865471740153,
+            "unspecified": 0.11611453467414118
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "site_only",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.4824240831658244,
+      "request_sha256": "8cf7d70292ca919dd8b192593f879b6cc3f0faadf775d89e9ef1e8af32eb3761"
+    },
+    {
+      "case_id": "c18",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.0066886552594410086,
+            "detection": 0.9926844572017042,
+            "ocr": 0.00033300853669086225,
+            "unsupported": 0.00029387900216391454
+          },
+          "locality": {
+            "site_only": 0.010930216292189833,
+            "remote_allowed": 0.9839067151171549,
+            "unspecified": 0.005163068590655387
+          },
+          "quality_floor": {
+            "standard": 0.8957549977247364,
+            "high": 0.03935672787786721,
+            "unspecified": 0.06488827439739638
+          },
+          "urgency": {
+            "normal": 0.009703161916439338,
+            "urgent": 0.9897494231472551,
+            "unspecified": 0.0005474149363055813
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "detection",
+          "locality": "remote_allowed",
+          "quality_floor": "standard",
+          "urgency": "urgent"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.48616841714829206,
+      "request_sha256": "8572836656abb8dc77f2070647566d717c06f32cca1e546f310c2430f730cf2e"
+    },
+    {
+      "case_id": "c19",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.014050170196625406,
+            "detection": 0.0006995167841595134,
+            "ocr": 0.9849929751755685,
+            "unsupported": 0.00025733784364664626
+          },
+          "locality": {
+            "site_only": 0.004066444690867807,
+            "remote_allowed": 0.9950262088540242,
+            "unspecified": 0.0009073464551080662
+          },
+          "quality_floor": {
+            "standard": 0.005905715373870471,
+            "high": 0.9931886138407741,
+            "unspecified": 0.0009056707853554904
+          },
+          "urgency": {
+            "normal": 0.9818029117778562,
+            "urgent": 0.005838013514648329,
+            "unspecified": 0.012359074707495532
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "ocr",
+          "locality": "remote_allowed",
+          "quality_floor": "high",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.46626412495970726,
+      "request_sha256": "3e9bbb0799018138b950b24084185a9bff13d77a66f9ed2a331b01cec34eb245"
+    },
+    {
+      "case_id": "c20",
+      "valid": true,
+      "error_type": null,
+      "labels": [
+        {
+          "service_type": "count",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "probabilities": [
+        {
+          "service_type": {
+            "count": 0.6691307340437016,
+            "detection": 0.010815490998490829,
+            "ocr": 0.003978796784519571,
+            "unsupported": 0.31607497817328806
+          },
+          "locality": {
+            "site_only": 0.0419018507239634,
+            "remote_allowed": 0.0044164225740127355,
+            "unspecified": 0.9536817267020239
+          },
+          "quality_floor": {
+            "standard": 0.9922468810121489,
+            "high": 0.00315810431828208,
+            "unspecified": 0.0045950146695690934
+          },
+          "urgency": {
+            "normal": 0.9895335687774126,
+            "urgent": 0.004582449541111329,
+            "unspecified": 0.005883981681476024
+          }
+        }
+      ],
+      "truth": [
+        {
+          "service_type": "count",
+          "locality": "unspecified",
+          "quality_floor": "standard",
+          "urgency": "normal"
+        }
+      ],
+      "resolved_model": "semif-qwen3.5-4b@23cf1f39",
+      "latency_s": 0.47512395959347486,
+      "request_sha256": "ade988d9fbaf0d2bd84312ad0154e5472e481c0f660137739e1503b59034f55b"
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "RQ1a/base/dev": {
+    "sha256": "d02285c734f05c0d747fe983c9402e6fc6ddd864680fa990f29d208386474c59",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.293990+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1a/base/test": {
+    "sha256": "a901930f456306e396fd10140c61b8278b49082dbfffe85dcf8466c0a3f8f904",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.249860+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1a/pad_16384/dev": {
+    "sha256": "5c12af6becd63f1a05d86be7e5c179c7f2528fa69e5e6c5fbd808f10b140d1d7",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.293990+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1a/pad_16384/test": {
+    "sha256": "7dae1cb5f593eb218746d3aabbf432b35d25719a3c8bd441f45013b8fe88859b",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.249860+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1a/pad_2048/dev": {
+    "sha256": "7ac5aef4e59109261e2315fa0ea7f420827aa5e4c9d2a986decaeef6e704afc2",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.293990+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1a/pad_2048/test": {
+    "sha256": "9a2cb319fe5ea086c0e2c91aaa1fc775b87adeb6d1e73d8b8a6634642be7b084",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.249860+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1a/pad_512/dev": {
+    "sha256": "0f03e91edf3c1a6ec852b05952462d911cb8c63c0ac7495403f6f63692b589e9",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.293990+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1a/pad_512/test": {
+    "sha256": "4ef01151050be56fba7603c81217357a08a88056f71a0dbb72540b2af636d81e",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.249860+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1a/pad_8192/dev": {
+    "sha256": "a460f253629a342398e013e3a203177d4d110fb515195157f25bd1414f0b6c28",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.293990+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1a/pad_8192/test": {
+    "sha256": "886c94f902e38e089b7aec89484dbfac23e16f21c8ec5e093ef090356fb8dc77",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.249860+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1b/k1/dev": {
+    "sha256": "18da6f1a6ace5f71122970ecd0a8a1010a69f9c9892a7e58408e74f3bf7dda08",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.423237+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1b/k1/test": {
+    "sha256": "4870952e7a5fa51c346941246e86c55180470805341cdca69228c61ee215e728",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.401291+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1b/k2/dev": {
+    "sha256": "610f224478891c278dcf3e903c89d2bfab65990711877715a8f24008c6ba001c",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.423237+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1b/k2/test": {
+    "sha256": "c2b3805c281d6697a2fe85be29ce6d7c3c715d145492097f53ca31da0f2c99c9",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.401291+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1b/k4/dev": {
+    "sha256": "c07de56f7c06d180274120e9125223180be6d122ea1a3c230bc9795507c5c5d6",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.423237+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1b/k4/test": {
+    "sha256": "af89d8b470ed987f335256b833530297dfb594f3a4c02d226d0964ca4e3cc9ed",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.401291+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ1b/k8/dev": {
+    "sha256": "aa5cf781f1e6ba635d0fe7678322674298f23e7df1b750e2dbc48af001c05ef4",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:38.423237+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ1b/k8/test": {
+    "sha256": "8272030901cc37410491f7af9efc213d44829a676dc1f9e09634421f08666e48",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:20.401291+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ2/clean/dev": {
+    "sha256": "d02285c734f05c0d747fe983c9402e6fc6ddd864680fa990f29d208386474c59",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/clean/test": {
+    "sha256": "a901930f456306e396fd10140c61b8278b49082dbfffe85dcf8466c0a3f8f904",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:13.476777+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ2/codeswitch/dev": {
+    "sha256": "7d1c738002326cc16bc537526b97ff1abb6f4c33e07400f096cdfea6c695463d",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/codeswitch/test": {
+    "sha256": "d5656ba4c0d45404ae5d5dbb0e7bb4b13d2b471f72b1e03484dbe09cf54f691e",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:10:16.936950+00:00",
+    "git_head": "628fd7e353727ee02c20c9b981ee807dfb675d58"
+  },
+  "RQ2/colloquial/dev": {
+    "sha256": "c703efbaacf9fa1083d392f9779765a2a1fcb7eae017d790b4488f691aa7e922",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/colloquial/test": {
+    "sha256": "a734702b332a858af2d18b411e49fc43744b8bbc263250e451403a482cd9afef",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:13.476777+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ2/defaultbait/dev": {
+    "sha256": "40f068a6dd35d794647613cf6f833b5447c3aa7747373db4f6f237b66f0178f2",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/defaultbait/test": {
+    "sha256": "4aef8310fa5336d1a5b6be2548559e66e3d0bddaf0a044bdaca732afb4fe412c",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:35:54.173423+00:00",
+    "git_head": "360aa32aeb2f46a70fddb3f6e54eba8a9849ecc9"
+  },
+  "RQ2/keyvalue/dev": {
+    "sha256": "a472651d8e5437641d3d01dcc5eaba2ebb48dcc5bfd54e69f37d14775351d234",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/keyvalue/test": {
+    "sha256": "4b24a15d7312a8d7d7e72be7dda3fd81ad6af5306e82843d2b94407384671287",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:10:16.936950+00:00",
+    "git_head": "628fd7e353727ee02c20c9b981ee807dfb675d58"
+  },
+  "RQ2/negation/dev": {
+    "sha256": "e08af6362611953c7f96450dbb989ae341cfbbdd566ddf5cc14d395cf50b0fb3",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/negation/test": {
+    "sha256": "d5cb75e4738bcde4b5cd1bfb535b55c7308c687f02110111aa8d4f65533b947d",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:13.476777+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ2/noise/dev": {
+    "sha256": "d9cfd1cbae021765d6693a67a0ef6f0e5aca595c65ee10102896276e3ec4113a",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:36.809204+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/noise/test": {
+    "sha256": "1e4168294218e84b61f006f8bea637c4d0035442b1a2af198a7de354871a5b59",
+    "n": 300,
+    "frozen_at": "2026-09-24T07:37:13.727764+00:00",
+    "git_head": "3e3e5f89f4973ee3b8a05da33064b39e9b64af03"
+  },
+  "RQ2/revised/dev": {
+    "sha256": "975378ce5253da084aaf16574a845d386cddcf450625a9f3042a999e0955c9a2",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ2/revised/test": {
+    "sha256": "4020a6133be84a8960c01ae37cf12c7f11a262bf5e2374b0fe0c4c37bb304655",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:10:16.936950+00:00",
+    "git_head": "628fd7e353727ee02c20c9b981ee807dfb675d58"
+  },
+  "RQ3/F4_high/dev": {
+    "sha256": "b9fa3e3e9f696af4b057b383699bb2eda039bbfafd6324428878c9c7b6a06f9a",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F4_high/test": {
+    "sha256": "e32541bb57f55878392f8486cfc886537aa69b5b9d3218f5c91b230a61fb369a",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:35:54.173423+00:00",
+    "git_head": "360aa32aeb2f46a70fddb3f6e54eba8a9849ecc9"
+  },
+  "RQ3/F4_low/dev": {
+    "sha256": "6b80a2388f511f08ff172ef3c6ca2c8099732295486ce84e14bf4855811d95cf",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F4_low/test": {
+    "sha256": "8c1ea24e55508d1968250f0aca3362547a8c26121ba4cdc44ea73faa78e004d9",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:10:16.936950+00:00",
+    "git_head": "628fd7e353727ee02c20c9b981ee807dfb675d58"
+  },
+  "RQ3/F4_medium/dev": {
+    "sha256": "e23d988ed651d1392f64c85916d5eb6315e01b80e65a18bae2612d178dfd9214",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F4_medium/test": {
+    "sha256": "2b7a038b498593269fc34797a0ef13986aeb2995e088cdcc7e38cd28376a8e97",
+    "n": 300,
+    "frozen_at": "2026-09-24T08:11:40.853520+00:00",
+    "git_head": "1b75c4a3c3031470a0b620c9c3862b8a391d21e2"
+  },
+  "RQ3/F6_high/dev": {
+    "sha256": "6c71b87f1ad974b38258f2a7b8a21fcb5d43cdbcebc3ccb390053fced10d67c1",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F6_high/test": {
+    "sha256": "61bd5fc84e63451629180742588f9550228a4ab7fc5701aa3119a6ab81f44112",
+    "n": 300,
+    "frozen_at": "2026-09-24T09:47:44.895968+00:00",
+    "git_head": "35064fe5307018200c09076b35c04c12554022e1"
+  },
+  "RQ3/F6_low/dev": {
+    "sha256": "052d24c9bfb46c76e6955effc8425d647d24deccb6d7856b77a8751bc32686ed",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F6_low/test": {
+    "sha256": "39d90ef9f7013ea68850d34b80244120056fa51a32e317db6b64bc94ac74db9c",
+    "n": 300,
+    "frozen_at": "2026-09-24T09:39:06.013374+00:00",
+    "git_head": "304d241c645b7677843a06d17ffe7f8626f49b22"
+  },
+  "RQ3/F6_medium/dev": {
+    "sha256": "b7aa160ed0147540e86b5bd19781ccd07d033170d3075883c2515d055c11810f",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F6_medium/test": {
+    "sha256": "408f73505d0e2c6e069abbc64b4508e3a43e421c0cb21a975cae8db46492db63",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:19:41.691009+00:00",
+    "git_head": "951d13234dbc2cc0e08788d685415752a9e5de62"
+  },
+  "RQ3/F8_high/dev": {
+    "sha256": "18153cf729eb87d4af131c3479ee01697116baf413c01493f94e68d55cc38fe3",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F8_high/test": {
+    "sha256": "db9c7854e035dbf530942bf81597785f645d18dac39c882b84fae71944347d74",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:15:15.172136+00:00",
+    "git_head": "cc91e0f78b419a9f9086e259b3772773b42a920a"
+  },
+  "RQ3/F8_low/dev": {
+    "sha256": "56d21ad695f51ebf7975e0065facd4d36117d836e43f35d269be6f7b65a4e050",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F8_low/test": {
+    "sha256": "0fca0acf83e429deb22b991f90f32066a8248a55684a3104cd95d5f28df20d59",
+    "n": 300,
+    "frozen_at": "2026-09-24T09:39:06.013374+00:00",
+    "git_head": "304d241c645b7677843a06d17ffe7f8626f49b22"
+  },
+  "RQ3/F8_medium/dev": {
+    "sha256": "954dbfd0b2025d4b6c35c921949b2f90e6c4771ff9acdf8fbdce55757fcfedd3",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ3/F8_medium/test": {
+    "sha256": "c043b5a96734d63eac2a2b12e4aa4223c4f9999a9a68e1b8ef54062426fe64a9",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:19:41.691009+00:00",
+    "git_head": "951d13234dbc2cc0e08788d685415752a9e5de62"
+  },
+  "RQ4/K128/dev": {
+    "sha256": "ae9e41de05d5aa907840366cbf2bc33873ea502d61e0d7fd1f5b049398fad432",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/K128/test": {
+    "sha256": "bc66bf44d9befcd089843212a86a369b604eb3da4246015fe8e3f33498a62207",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:29:22.190194+00:00",
+    "git_head": "d1c652e9a9d40210a127b8e6ac7133b4007893d7"
+  },
+  "RQ4/K15/dev": {
+    "sha256": "0f8f1d60af1e8d1fe8b1cf4d39c8501e76f8039dfff06b41dae79c0d32592275",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/K15/test": {
+    "sha256": "48dbfcbcd528e5a676715e6b5070228e7443a1a5df3b77e5ae36b6de3423b242",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:19:41.691009+00:00",
+    "git_head": "951d13234dbc2cc0e08788d685415752a9e5de62"
+  },
+  "RQ4/K254/dev": {
+    "sha256": "746957d6616ac0ba15c568e3ae7ac1f0df35efb567e8988847744d3874623325",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/K254/test": {
+    "sha256": "a0fde5ca8a035701ae0442489f50580e170c0f7253b8fba35f3e5dd7798a5596",
+    "n": 300,
+    "frozen_at": "2026-09-24T09:47:44.895968+00:00",
+    "git_head": "35064fe5307018200c09076b35c04c12554022e1"
+  },
+  "RQ4/K4/dev": {
+    "sha256": "b0fa036265791f9e801e5b3c380ac7bf4ca561f580631d63829dfc8529ceab59",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/K4/test": {
+    "sha256": "58c892c4dd466033bee60817d7ef51b2301f63bed0806cc3f8193e67fbc89f5e",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:19:41.691009+00:00",
+    "git_head": "951d13234dbc2cc0e08788d685415752a9e5de62"
+  },
+  "RQ4/K64/dev": {
+    "sha256": "4055450057ae7de80e8d6fda80e05a0ad8ce6cde77ad48e38afe66142a04c57f",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/K64/test": {
+    "sha256": "4ec195caa2fb648fd94419cde7787818317cdae78e761360e5c849027e89d870",
+    "n": 300,
+    "frozen_at": "2026-09-24T09:47:44.895968+00:00",
+    "git_head": "35064fe5307018200c09076b35c04c12554022e1"
+  },
+  "RQ4/churn25/dev": {
+    "sha256": "345ee855cd0caf5f5a273a5be0e7e564c81e5e14d46f3ffabe659614d4d6762a",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/churn25/test": {
+    "sha256": "5ddfc859c1da5d4be3c5c8fcdcaf7c953f9fa45b3d5a3cdc98d02406916e0f41",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:24:10.379243+00:00",
+    "git_head": "4a723da0eb738a86d3fe5e11061d7484df58df04"
+  },
+  "RQ4/churn50/dev": {
+    "sha256": "5e6b69473d749a1ec4f26cf7d1516b7da36c07e97a5692673040848c0fc975aa",
+    "n": 60,
+    "frozen_at": "2026-09-24T12:26:35.035424+00:00",
+    "git_head": "a3eb6d7c7deb3e526ba12050bb04346a78e37797"
+  },
+  "RQ4/churn50/test": {
+    "sha256": "08984d577093257dd120c77eab845799b6b972834ef85dae410d00ba4ad57fdf",
+    "n": 300,
+    "frozen_at": "2026-09-24T11:19:41.691009+00:00",
+    "git_head": "951d13234dbc2cc0e08788d685415752a9e5de62"
+  }
+}

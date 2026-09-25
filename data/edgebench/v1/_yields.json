@@ -1,0 +1,163 @@
+{
+  "clean": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "colloquial": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "negation": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "F4_low": {
+    "target_n": 360,
+    "first_pass_accepted": 359,
+    "accepted": 360,
+    "first_pass": 0.9972222222222222,
+    "final": 1.0
+  },
+  "codeswitch": {
+    "target_n": 360,
+    "first_pass_accepted": 336,
+    "accepted": 360,
+    "first_pass": 0.9333333333333333,
+    "final": 1.0
+  },
+  "keyvalue": {
+    "target_n": 360,
+    "first_pass_accepted": 359,
+    "accepted": 360,
+    "first_pass": 0.9972222222222222,
+    "final": 1.0
+  },
+  "revised": {
+    "target_n": 360,
+    "first_pass_accepted": 358,
+    "accepted": 360,
+    "first_pass": 0.9944444444444445,
+    "final": 1.0
+  },
+  "F4_medium": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "F4_high": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "defaultbait": {
+    "target_n": 360,
+    "first_pass_accepted": 324,
+    "accepted": 360,
+    "first_pass": 0.9,
+    "final": 1.0
+  },
+  "F6_low": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "F8_low": {
+    "target_n": 360,
+    "first_pass_accepted": 354,
+    "accepted": 360,
+    "first_pass": 0.9833333333333333,
+    "final": 1.0
+  },
+  "F6_high": {
+    "target_n": 360,
+    "first_pass_accepted": 354,
+    "accepted": 360,
+    "first_pass": 0.9833333333333333,
+    "final": 1.0
+  },
+  "K254": {
+    "target_n": 360,
+    "first_pass_accepted": 357,
+    "accepted": 360,
+    "first_pass": 0.9916666666666667,
+    "final": 1.0
+  },
+  "K64": {
+    "target_n": 360,
+    "first_pass_accepted": 359,
+    "accepted": 360,
+    "first_pass": 0.9972222222222222,
+    "final": 1.0
+  },
+  "F8_high": {
+    "target_n": 360,
+    "first_pass_accepted": 360,
+    "accepted": 360,
+    "first_pass": 1.0,
+    "final": 1.0
+  },
+  "F6_medium": {
+    "target_n": 360,
+    "first_pass_accepted": 352,
+    "accepted": 360,
+    "first_pass": 0.9777777777777777,
+    "final": 1.0
+  },
+  "F8_medium": {
+    "target_n": 360,
+    "first_pass_accepted": 356,
+    "accepted": 360,
+    "first_pass": 0.9888888888888889,
+    "final": 1.0
+  },
+  "K15": {
+    "target_n": 360,
+    "first_pass_accepted": 352,
+    "accepted": 360,
+    "first_pass": 0.9777777777777777,
+    "final": 1.0
+  },
+  "K4": {
+    "target_n": 360,
+    "first_pass_accepted": 351,
+    "accepted": 360,
+    "first_pass": 0.975,
+    "final": 1.0
+  },
+  "churn50": {
+    "target_n": 360,
+    "first_pass_accepted": 357,
+    "accepted": 360,
+    "first_pass": 0.9916666666666667,
+    "final": 1.0
+  },
+  "churn25": {
+    "target_n": 360,
+    "first_pass_accepted": 356,
+    "accepted": 360,
+    "first_pass": 0.9888888888888889,
+    "final": 1.0
+  },
+  "K128": {
+    "target_n": 360,
+    "first_pass_accepted": 352,
+    "accepted": 360,
+    "first_pass": 0.9777777777777777,
+    "final": 1.0
+  }
+}

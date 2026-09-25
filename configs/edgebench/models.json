@@ -1,0 +1,332 @@
+{
+  "Jev-1.13.0": {
+    "display_name": "Jev-1.13.0",
+    "family": "decision",
+    "deployment": "hosted",
+    "platform": "hosted",
+    "adapter": "decisions",
+    "model": "typesafe/jev-1.13",
+    "accepted_resolved_models": [
+      "typesafe/jev-1.13",
+      "typesafe/jev-1.13-20260917"
+    ],
+    "provider": "TypeSafe",
+    "base_url": "https://openrouter.ai",
+    "path": "/api/alpha/decisions",
+    "decoding_params": {}
+  },
+  "DeepSeek-V4.1-Flash": {
+    "display_name": "DeepSeek-V4.1-Flash",
+    "family": "llm",
+    "deployment": "hosted",
+    "platform": "hosted",
+    "adapter": "chat_json",
+    "model": "deepseek/deepseek-v4.1-flash",
+    "accepted_resolved_models": [
+      "deepseek/deepseek-v4.1-flash"
+    ],
+    "provider": "together",
+    "base_url": "https://openrouter.ai",
+    "path": "/api/v1/chat/completions",
+    "decoding_params": {
+      "temperature": 0
+    },
+    "reasoning": {
+      "enabled": false
+    }
+  },
+  "GLM-5.3-Flash": {
+    "display_name": "GLM-5.3-Flash",
+    "family": "llm",
+    "deployment": "hosted",
+    "platform": "hosted",
+    "adapter": "chat_json",
+    "model": "z-ai/glm-5.3-flash",
+    "accepted_resolved_models": [
+      "z-ai/glm-5.3-flash"
+    ],
+    "provider": "together",
+    "base_url": "https://openrouter.ai",
+    "path": "/api/v1/chat/completions",
+    "decoding_params": {
+      "temperature": 0
+    },
+    "reasoning": {
+      "effort": "minimal"
+    }
+  },
+  "Qwen3.8-Flash": {
+    "display_name": "Qwen3.8-Flash",
+    "family": "llm",
+    "deployment": "hosted",
+    "platform": "hosted",
+    "adapter": "chat_json",
+    "model": "qwen/qwen3.8-flash",
+    "accepted_resolved_models": [
+      "qwen/qwen3.8-flash"
+    ],
+    "provider": "alibaba",
+    "base_url": "https://openrouter.ai",
+    "path": "/api/v1/chat/completions",
+    "decoding_params": {
+      "temperature": 0
+    },
+    "reasoning": {
+      "enabled": false
+    }
+  },
+  "SemIf-Qwen3.5-4B": {
+    "display_name": "SemIf-Qwen3.5-4B",
+    "family": "decision",
+    "deployment": "self-hosted",
+    "platform": "M4-Max",
+    "adapter": "decisions",
+    "model": "semif-qwen3.5-4b@23cf1f39",
+    "accepted_resolved_models": [
+      "semif-qwen3.5-4b@23cf1f39"
+    ],
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8601",
+    "path": "/api/alpha/decisions",
+    "decoding_params": {}
+  },
+  "Laya": {
+    "display_name": "Laya",
+    "family": "decision",
+    "deployment": "self-hosted",
+    "platform": "M4-Max",
+    "adapter": "decisions",
+    "model": "laya-typed-decisions@bc76315b",
+    "accepted_resolved_models": [
+      "laya-typed-decisions@bc76315b"
+    ],
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8602",
+    "path": "/api/alpha/decisions",
+    "decoding_params": {}
+  },
+  "Qwen3.5-4B-JSON": {
+    "display_name": "Qwen3.5-4B-JSON",
+    "family": "reference",
+    "deployment": "self-hosted",
+    "platform": "M4-Max",
+    "adapter": "chat_json",
+    "model": "qwen3.5-4b-json@851bf6e8+constrained",
+    "accepted_resolved_models": [
+      "qwen3.5-4b-json@851bf6e8+constrained"
+    ],
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8603",
+    "path": "/api/v1/chat/completions",
+    "decoding_params": {
+      "temperature": 0
+    },
+    "reasoning": {
+      "enabled": false
+    }
+  },
+  "SemIf-Qwen3.5-4B@cuda": {
+    "display_name": "SemIf-Qwen3.5-4B@cuda",
+    "family": "decision",
+    "deployment": "self-hosted",
+    "platform": "H100-NVL",
+    "adapter": "decisions",
+    "model": "semif-qwen3.5-4b@23cf1f39+cuda",
+    "accepted_resolved_models": [
+      "semif-qwen3.5-4b@23cf1f39+cuda"
+    ],
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8700",
+    "path": "/api/alpha/decisions",
+    "decoding_params": {}
+  },
+  "Laya@cuda": {
+    "display_name": "Laya@cuda",
+    "family": "decision",
+    "deployment": "self-hosted",
+    "platform": "H100-NVL",
+    "adapter": "decisions",
+    "model": "laya-typed-decisions@bc76315b+cuda",
+    "accepted_resolved_models": [
+      "laya-typed-decisions@bc76315b+cuda"
+    ],
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8800",
+    "path": "/api/alpha/decisions",
+    "decoding_params": {}
+  },
+  "Qwen3.5-4B-JSON@cuda": {
+    "display_name": "Qwen3.5-4B-JSON@cuda",
+    "family": "reference",
+    "deployment": "self-hosted",
+    "platform": "H100-NVL",
+    "adapter": "chat_json",
+    "model": "qwen3.5-4b-json@851bf6e8+constrained-cuda",
+    "accepted_resolved_models": [
+      "qwen3.5-4b-json@851bf6e8+constrained-cuda"
+    ],
+    "provider": "local",
+    "base_url": "http://127.0.0.1:8900",
+    "path": "/api/v1/chat/completions",
+    "decoding_params": {
+      "temperature": 0
+    },
+    "reasoning": {
+      "enabled": false
+    }
+  },
+  "Rule": {
+    "display_name": "Rule",
+    "family": "reference",
+    "deployment": "reference",
+    "platform": "M4-Max",
+    "adapter": "rule",
+    "model": "rule_parser",
+    "accepted_resolved_models": [
+      "reference:rule"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "Oracle": {
+    "display_name": "Oracle",
+    "family": "reference",
+    "deployment": "reference",
+    "platform": "M4-Max",
+    "adapter": "oracle",
+    "model": "oracle",
+    "accepted_resolved_models": [
+      "reference:oracle"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "MiniLM-Reranker": {
+    "display_name": "MiniLM-Reranker",
+    "family": "reference",
+    "deployment": "reference",
+    "platform": "M4-Max",
+    "adapter": "reranker",
+    "model": "sentence-transformers/all-MiniLM-L6-v2",
+    "config_path": "runs/EXP-2026-001/_reference/_models/reranker.json",
+    "accepted_resolved_models": [
+      "reference:reranker"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "DistilBERT-Clf-All": {
+    "display_name": "DistilBERT-Clf-All",
+    "family": "reference",
+    "deployment": "reference",
+    "platform": "M4-Max",
+    "adapter": "service_classifier",
+    "model": "runs/EXP-2026-001/_reference/_models/clf_all",
+    "accepted_resolved_models": [
+      "reference:clf_all"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "DistilBERT-Clf-Frozen": {
+    "display_name": "DistilBERT-Clf-Frozen",
+    "family": "reference",
+    "deployment": "reference",
+    "platform": "M4-Max",
+    "adapter": "service_classifier",
+    "model": "runs/EXP-2026-001/_reference/_models/clf_frozen",
+    "accepted_resolved_models": [
+      "reference:clf_frozen"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "DistilBERT-Clf-Retrained": {
+    "display_name": "DistilBERT-Clf-Retrained",
+    "family": "reference",
+    "deployment": "reference",
+    "platform": "M4-Max",
+    "adapter": "service_classifier",
+    "model": "runs/EXP-2026-001/_reference/_models",
+    "heads": {
+      "churn25": "runs/EXP-2026-001/_reference/_models/clf_retrained_25",
+      "churn50": "runs/EXP-2026-001/_reference/_models/clf_retrained_50"
+    },
+    "accepted_resolved_models": [
+      "reference:clf_retrained_25",
+      "reference:clf_retrained_50"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "oracle": {
+    "display_name": "oracle",
+    "family": "control",
+    "deployment": "reference",
+    "platform": "hosted",
+    "adapter": "oracle",
+    "model": "oracle",
+    "accepted_resolved_models": [
+      "reference:oracle"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "fixed-latency": {
+    "display_name": "fixed-latency",
+    "family": "control",
+    "deployment": "reference",
+    "platform": "hosted",
+    "adapter": "fixed-latency",
+    "delay_s": 0.6,
+    "model": "fixed-latency",
+    "accepted_resolved_models": [
+      "reference:fixed-latency-0.6"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "fixed-latency-0.3": {
+    "display_name": "fixed-latency-0.3",
+    "family": "control",
+    "deployment": "reference",
+    "platform": "hosted",
+    "adapter": "fixed-latency",
+    "delay_s": 0.3,
+    "model": "fixed-latency",
+    "accepted_resolved_models": [
+      "reference:fixed-latency-0.3"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "fixed-latency-0.6": {
+    "display_name": "fixed-latency-0.6",
+    "family": "control",
+    "deployment": "reference",
+    "platform": "hosted",
+    "adapter": "fixed-latency",
+    "delay_s": 0.6,
+    "model": "fixed-latency",
+    "accepted_resolved_models": [
+      "reference:fixed-latency-0.6"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  },
+  "fixed-latency-1.2": {
+    "display_name": "fixed-latency-1.2",
+    "family": "control",
+    "deployment": "reference",
+    "platform": "hosted",
+    "adapter": "fixed-latency",
+    "delay_s": 1.2,
+    "model": "fixed-latency",
+    "accepted_resolved_models": [
+      "reference:fixed-latency-1.2"
+    ],
+    "provider": "local",
+    "decoding_params": {}
+  }
+}
+
