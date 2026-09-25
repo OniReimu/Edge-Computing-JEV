@@ -5,8 +5,9 @@ Code, benchmark, and results for the paper
 > **Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration**
 > Delong Li, Xu Wang, Haochen Gong, Rui Lang, and Guangsheng Yu. University of Technology Sydney.
 
-The EdgeIntent v1 benchmark and the experiment results are also on Hugging Face:
-[datasets/OniReimu/Edge-Computing-JEV](https://huggingface.co/datasets/OniReimu/Edge-Computing-JEV).
+The EdgeIntent v1 benchmark, the experiment results, and the raw per-request run records are on Hugging Face:
+[datasets/OniReimu/Edge-Computing-JEV](https://huggingface.co/datasets/OniReimu/Edge-Computing-JEV). The RQ4 DistilBERT
+classifiers are at [OniReimu/Edge-Computing-JEV-classifiers](https://huggingface.co/OniReimu/Edge-Computing-JEV-classifiers).
 
 The paper places an interpreter in an edge-service admission path. The interpreter turns a natural-language
 request into a typed intent contract (service, locality, quality floor, urgency, and up to four further fields).
@@ -60,11 +61,26 @@ archive, run `git init && git add -A && git commit -m snapshot` once before runn
 The numbers quoted in the text are listed, with the table row each one comes from, in
 `experiments/rq1-rq4-interpretation/results/paper_numbers.md` and `experiments/rq5-end-to-end/results/paper_numbers.md`.
 
+## Recomputing the results from the raw run records
+
+The raw run records (about 400 MB) are in the `runs/` folder of the Hugging Face dataset. They rebuild every file in
+`experiments/*/results/` without API keys or GPUs:
+
+```bash
+uv pip install huggingface_hub
+uv run hf download OniReimu/Edge-Computing-JEV --repo-type dataset --include "runs/*" --local-dir hf
+uv run python scripts/eb_analyze.py --runs-dir hf/runs/EXP-2026-001 \
+    --sensitivity-dir hf/runs/EXP-2026-001-sensitivity --out out/rq1-rq4
+uv run python scripts/eb_rq5_analyze.py --root-a hf/runs/EXP-2026-002/rq5a \
+    --root-b hf/runs/EXP-2026-002/rq5b --traces-dir traces --out out/rq5
+```
+
+The outputs match `experiments/*/results/` byte for byte, apart from the generation timestamp in `report.md`.
+
 ## Reproducing the experiments from scratch
 
-Re-running the experiments makes live calls to hosted models and needs the self-hosted models. Raw run records
-(about 1.5 GB of per-request ledgers) are not part of this repository. Each experiment README gives the exact
-commands, and the analysis scripts rebuild `experiments/*/results/` from new runs.
+Re-running the experiments makes live calls to hosted models and needs the self-hosted models. Each experiment README
+gives the exact commands, and the analysis scripts rebuild `experiments/*/results/` from new runs.
 
 ### Credentials
 
