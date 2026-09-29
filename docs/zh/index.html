@@ -1,14 +1,451 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eef2f7"><meta name="description" content="展示边缘服务编排中的决策时延、意图解析准确率与服务完成率，支持交互比较实验条件。"><title>Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration</title><link rel="stylesheet" href="../styles.css">  <meta property="og:title" content="Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration">
-  <meta property="og:description" content="展示边缘服务编排中的决策时延、意图解析准确率与服务完成率，支持交互比较实验条件。">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://onireimu.github.io/Edge-Computing-JEV/zh/">
-  <meta property="og:image" content="https://onireimu.github.io/Edge-Computing-JEV/assets/system-architecture.png">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration">
-  <meta name="twitter:description" content="展示边缘服务编排中的决策时延、意图解析准确率与服务完成率，支持交互比较实验条件。">
-  <link rel="canonical" href="https://onireimu.github.io/Edge-Computing-JEV/zh/">
-<link rel="alternate" hreflang="en" href="https://onireimu.github.io/Edge-Computing-JEV/"><link rel="alternate" hreflang="zh-CN" href="https://onireimu.github.io/Edge-Computing-JEV/zh/"><link rel="alternate" hreflang="x-default" href="https://onireimu.github.io/Edge-Computing-JEV/"></head><body><a class="skip" href="#explorer">Skip to explorer</a><header><a href="#top" class="brand"><span class="mark">E<span>↗</span></span> EDGE / ORCHESTRATION</a><nav><a href="#study" data-x="navStudy"></a><a href="#scale" data-x="navScale"></a><a href="#explorer" data-i="navExplore"></a><a href="#pipeline" data-i="navSystem"></a><a href="#reading" data-i="navPaper"></a><a id="language"></a></nav></header><div class="reading-progress" aria-hidden="true"><span></span></div><noscript><p style="padding:30px">JavaScript is needed for the data explorer. <a href="https://arxiv.org/pdf/2609.22753">Read the paper PDF</a>.</p></noscript><main id="top"><section class="hero"><div class="hero-copy"><div class="edition"><span>RESEARCH / 2026</span><span>EDGE COMPUTING</span></div><div class="eyebrow"><span class="dot"></span><span data-i="eyebrow"></span></div><h1 data-i="headline"></h1><p class="lead" data-i="intro"></p><p class="hero-authors">Delong Li · Xu Wang · Haochen Gong · Rui Lang · Guangsheng Yu<br><span>University of Technology Sydney</span></p><div class="hero-actions"><a class="button lime" href="#explorer" data-i="start"></a><a href="https://arxiv.org/pdf/2609.22753" class="button outline pdf" data-i="pdf"></a></div><div class="facts"><div><b>8,280</b><span data-i="requests"></span></div><div><b>33</b><span data-i="conditions"></span></div><div><b>22.7–64.5%</b><span data-i="gain"></span></div></div><p class="hero-foot" data-i="heroFoot"></p></div><div class="hero-visual"><div class="visual-top"><span data-i="visualTitle"></span><span class="badge" data-i="concept"></span></div><div class="request-chip">“Read this image locally, high quality, urgent.”</div><div class="connector"></div><div class="decision-box"><span class="node-symbol">⤨</span><div><small data-i="interpret"></small><strong>Jev / LLM</strong></div><span class="pulse"></span></div><div class="code-line">service: OCR <span>·</span> locality: site_only<br>tier: high <span>·</span> priority: urgent</div><div class="connector"></div><div class="workers"><span>✓ <small data-i="validate"></small></span><span>⇢ <small data-i="schedule"></small></span><span>▣ <small data-i="execute"></small></span></div><div class="budget"><span data-i="budget"></span><div><i></i><i></i><i></i></div><small data-i="budgetNote"></small></div></div></section>
-<section id="study" class="study editorial"><div class="margin-label"><span>01</span><small data-x="studyLabel"></small></div><div class="study-main"><p class="section-no" data-x="researchContext"></p><h2 data-x="studyTitle"></h2><div class="study-prose"><p data-x="studyIntro"></p><p data-x="studySecond"></p></div><div class="evidence-map"><div class="evidence-type"><span class="type-index">A</span><h3 data-x="layerATitle"></h3><p data-x="layerA"></p><div class="micro-tags"><span>RQ1–RQ4</span><span>EdgeIntent v1</span></div></div><div class="evidence-type"><span class="type-index">B</span><h3 data-x="layerBTitle"></h3><p data-x="layerB"></p><div class="micro-tags"><span>RQ5 / A</span><span>RQ5 / B</span></div></div></div><div class="corpus-strip"><div><b>23 + 10</b><span data-x="corpusConditions"></span></div><div><b>300 / 60</b><span data-x="corpusSplits"></span></div><div><b>6</b><span data-x="wording"></span></div></div><details class="method-details"><summary data-x="corpusMore"></summary><div class="corpus-steps"><div><b>01</b><h4 data-x="c1Title"></h4><p data-x="c1"></p></div><div><b>02</b><h4 data-x="c2Title"></h4><p data-x="c2"></p></div><div><b>03</b><h4 data-x="c3Title"></h4><p data-x="c3"></p></div></div></details></div></section><section id="pipeline" class="pipeline"><div class="section-top"><div><span class="section-no">02 / SYSTEM DESIGN</span><h2 data-i="pipelineTitle"></h2></div><p data-i="pipelineSub"></p></div><div class="pipeline-tabs" id="pipeline-tabs"></div><div class="pipeline-detail"><span id="step-number"></span><div><h3 id="step-title"></h3><p id="step-body"></p></div><div class="step-equation">T<sub>request</sub> = T<sub>waiting</sub> + T<sub>decision</sub><br>+ T<sub>transfer</sub> + T<sub>execution</sub></div></div><details class="architecture"><summary data-i="architecture"></summary><img id="architecture-img" alt="System architecture reproduced from the manuscript" loading="lazy"></details></section>
-<section id="scale" class="scale editorial"><div class="margin-label"><span>03</span><small data-x="scaleLabel"></small></div><div class="scale-main"><div class="section-top"><div><p class="section-no">RQ1 / INPUT LENGTH</p><h2 data-x="scaleTitle"></h2></div><p data-x="scaleIntro"></p></div><div class="scale-layout"><div class="plot-panel"><div class="plot-toolbar"><div class="segment" id="scale-metrics"></div><span class="plot-unit" id="scale-unit"></span></div><div id="trend-plot"></div><div class="scale-slider"><label for="input-length" data-x="lengthLabel"></label><input id="input-length" type="range" min="0" max="4" step="1" value="0"><output id="input-length-value" for="input-length"></output></div><div id="plot-legend" class="plot-legend"></div></div><aside class="scale-reading"><div class="data-kicker" data-x="selectedCondition"></div><h3 id="scale-selection"></h3><div id="scale-readout"></div><p id="scale-note"></p><small data-x="scaleSource"></small></aside></div></div></section><section id="explorer" class="explorer"><div class="section-top"><div><span class="section-no">04 / SERVICE OUTCOMES</span><h2 data-i="exploreTitle"></h2></div><p data-i="exploreSub"></p></div><div class="lab"><aside class="controls"><div class="control-heading" data-i="choose"></div><div id="experiments" class="experiment-list"></div><div class="divider"></div><div id="scenario-controls"></div><div class="divider"></div><label class="check"><input type="checkbox" id="local-models"><span data-i="showLocal"></span></label><p class="control-note" data-i="localNote"></p><button id="reset" class="text-button" data-i="reset"></button></aside><div class="chart-area"><div class="chart-top"><div><span class="chart-eyebrow" id="chart-context"></span><h3 id="chart-title"></h3></div><div class="metric-toggle"><button id="completion" aria-pressed="true" data-i="completion"></button><button id="latency" aria-pressed="false" data-i="latency"></button></div></div><p id="metric-definition" class="metric-note"></p><div id="bar-chart" class="bar-chart" role="img"></div><div class="chart-axis"><span id="axis-start"></span><span id="axis-end"></span></div><div class="insight" aria-live="polite"><span>↗</span><p id="insight-text"></p></div><details class="data-details"><summary data-i="table"></summary><div class="table-scroll"><table><thead><tr><th data-i="model"></th><th id="table-rate"></th><th id="table-time"></th></tr></thead><tbody id="table-body"></tbody></table></div></details><div class="source-row"><span id="source"></span><a id="download" download="edge-orchestration-data.json" data-i="download"></a></div></div></div></section>
-<section id="catalog" class="catalog editorial"><div class="margin-label"><span>05</span><small data-x="catalogLabel"></small></div><div class="catalog-main"><div class="section-top"><div><p class="section-no">RQ4 / SERVICE CATALOG</p><h2 data-x="catalogTitle"></h2></div><p data-x="catalogIntro"></p></div><div class="catalog-toolbar"><span data-x="catalogSize"></span><div id="catalog-sizes" class="segment"></div></div><div class="matrix-scroll"><table class="matrix"><thead><tr><th data-x="interpreter"></th><th data-x="seen"></th><th data-x="unseen"></th><th data-x="unsupported"></th><th data-x="valid"></th><th data-x="decisionTime"></th></tr></thead><tbody id="catalog-body"></tbody></table></div><div class="catalog-notes"><p data-x="catalogNote1"></p><p data-x="catalogNote2"></p></div><div class="catalog-foot" data-x="catalogSource"></div></div></section><section class="boundaries"><span class="section-no">06 / FINDINGS</span><h2 data-i="boundaryTitle"></h2><div class="boundary-grid"><article><span class="signal green"></span><h3 data-i="b1Title"></h3><p data-i="b1"></p><button data-preset="load" data-i="b1Link"></button></article><article><span class="signal orange"></span><h3 data-i="b2Title"></h3><p data-i="b2"></p><button data-preset="contract" data-i="b2Link"></button></article><article><span class="signal blue"></span><h3 data-i="b3Title"></h3><p data-i="b3"></p><button data-preset="ocr" data-i="b3Link"></button></article></div></section>
-<section id="reading" class="reading"><div><span class="section-no">07 / THE PAPER</span><h2>Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration</h2><p class="authors">Delong Li · Xu Wang · Haochen Gong · Rui Lang · Guangsheng Yu</p><p>School of Electrical, Mechanical and Biomedical Engineering<br>University of Technology Sydney</p><a href="https://arxiv.org/pdf/2609.22753" class="button dark pdf" data-i="pdf"></a><button class="button pale" id="copy" data-i="copy"></button><p id="copy-status" aria-live="polite"></p></div><aside><h3 data-i="scopeTitle"></h3><p data-i="scope1"></p><p data-i="scope2"></p><p data-i="scope3"></p><small data-i="version"></small></aside></section></main><footer><span>EDGE / ORCHESTRATION</span><span data-i="footer"></span><a href="#top">↑</a></footer><script src="../script.js"></script><script src="../extended.js"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#eef2f7" />
+    <meta
+      name="description"
+      content="展示边缘服务编排中的决策时延、意图解析准确率与服务完成率，支持交互比较实验条件。"
+    />
+    <title>
+      Replacing Large Language Models with Jev Decision Models for Low-Latency
+      Edge Service Orchestration
+    </title>
+    <link rel="stylesheet" href="../styles.css" />
+    <meta
+      property="og:title"
+      content="Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration"
+    />
+    <meta
+      property="og:description"
+      content="展示边缘服务编排中的决策时延、意图解析准确率与服务完成率，支持交互比较实验条件。"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://onireimu.github.io/Edge-Computing-JEV/zh/"
+    />
+    <meta
+      property="og:image"
+      content="https://onireimu.github.io/Edge-Computing-JEV/assets/system-architecture.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration"
+    />
+    <meta
+      name="twitter:description"
+      content="展示边缘服务编排中的决策时延、意图解析准确率与服务完成率，支持交互比较实验条件。"
+    />
+    <link
+      rel="canonical"
+      href="https://onireimu.github.io/Edge-Computing-JEV/zh/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://onireimu.github.io/Edge-Computing-JEV/"
+    />
+    <link
+      rel="alternate"
+      hreflang="zh-CN"
+      href="https://onireimu.github.io/Edge-Computing-JEV/zh/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://onireimu.github.io/Edge-Computing-JEV/"
+    />
+  </head>
+  <body>
+    <a class="skip" href="#explorer">Skip to explorer</a>
+    <header>
+      <a href="#top" class="brand"
+        ><span class="mark">E<span>↗</span></span> EDGE / ORCHESTRATION</a
+      >
+      <nav>
+        <a href="#study" data-x="navStudy"></a
+        ><a href="#scale" data-x="navScale"></a
+        ><a href="#explorer" data-i="navExplore"></a
+        ><a href="#pipeline" data-i="navSystem"></a
+        ><a href="#reading" data-i="navPaper"></a><a id="language"></a>
+      </nav>
+    </header>
+    <div class="reading-progress" aria-hidden="true"><span></span></div>
+    <noscript
+      ><p style="padding: 30px">
+        JavaScript is needed for the data explorer.
+        <a href="https://arxiv.org/pdf/2609.22753">Read the paper PDF</a>.
+      </p></noscript
+    >
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="edition">
+            <span>RESEARCH / 2026</span><span>EDGE COMPUTING</span>
+          </div>
+          <div class="eyebrow">
+            <span class="dot"></span><span data-i="eyebrow"></span>
+          </div>
+          <h1 data-i="headline"></h1>
+          <p class="lead" data-i="intro"></p>
+          <p class="hero-authors">
+            Delong Li · Xu Wang · Haochen Gong · Rui Lang · Guangsheng Yu<br /><span
+              >University of Technology Sydney</span
+            >
+          </p>
+          <div class="hero-actions">
+            <a class="button lime" href="#explorer" data-i="start"></a
+            ><a
+              href="https://arxiv.org/pdf/2609.22753"
+              class="button outline pdf"
+              data-i="pdf"
+            ></a>
+          </div>
+          <div class="facts">
+            <div><b>8,280</b><span data-i="requests"></span></div>
+            <div><b>33</b><span data-i="conditions"></span></div>
+            <div><b>22.7–64.5%</b><span data-i="gain"></span></div>
+          </div>
+          <p class="hero-foot" data-i="heroFoot"></p>
+        </div>
+        <div class="hero-visual">
+          <div class="visual-top">
+            <span data-i="visualTitle"></span
+            ><span class="badge" data-i="concept"></span>
+          </div>
+          <div class="request-chip">
+            “Read this image locally, high quality, urgent.”
+          </div>
+          <div class="connector"></div>
+          <div class="decision-box">
+            <span class="node-symbol">⤨</span>
+            <div>
+              <small data-i="interpret"></small><strong>Jev / LLM</strong>
+            </div>
+            <span class="pulse"></span>
+          </div>
+          <div class="code-line">
+            service: OCR <span>·</span> locality: site_only<br />tier: high
+            <span>·</span> priority: urgent
+          </div>
+          <div class="connector"></div>
+          <div class="workers">
+            <span>✓ <small data-i="validate"></small></span
+            ><span>⇢ <small data-i="schedule"></small></span
+            ><span>▣ <small data-i="execute"></small></span>
+          </div>
+          <div class="budget">
+            <span data-i="budget"></span>
+            <div><i></i><i></i><i></i></div>
+            <small data-i="budgetNote"></small>
+          </div>
+        </div>
+      </section>
+      <section id="study" class="study editorial">
+        <div class="margin-label">
+          <span>01</span><small data-x="studyLabel"></small>
+        </div>
+        <div class="study-main">
+          <p class="section-no" data-x="researchContext"></p>
+          <h2 data-x="studyTitle"></h2>
+          <div class="study-prose">
+            <p data-x="studyIntro"></p>
+            <p data-x="studySecond"></p>
+          </div>
+          <div class="evidence-map">
+            <div class="evidence-type">
+              <span class="type-index">A</span>
+              <h3 data-x="layerATitle"></h3>
+              <p data-x="layerA"></p>
+              <div class="micro-tags">
+                <span>RQ1–RQ4</span><span>EdgeIntent v1</span>
+              </div>
+            </div>
+            <div class="evidence-type">
+              <span class="type-index">B</span>
+              <h3 data-x="layerBTitle"></h3>
+              <p data-x="layerB"></p>
+              <div class="micro-tags">
+                <span>RQ5 / A</span><span>RQ5 / B</span>
+              </div>
+            </div>
+          </div>
+          <div class="corpus-strip">
+            <div><b>23 + 10</b><span data-x="corpusConditions"></span></div>
+            <div><b>300 / 60</b><span data-x="corpusSplits"></span></div>
+            <div><b>6</b><span data-x="wording"></span></div>
+          </div>
+          <details class="method-details">
+            <summary data-x="corpusMore"></summary>
+            <div class="corpus-steps">
+              <div>
+                <b>01</b>
+                <h4 data-x="c1Title"></h4>
+                <p data-x="c1"></p>
+              </div>
+              <div>
+                <b>02</b>
+                <h4 data-x="c2Title"></h4>
+                <p data-x="c2"></p>
+              </div>
+              <div>
+                <b>03</b>
+                <h4 data-x="c3Title"></h4>
+                <p data-x="c3"></p>
+              </div>
+            </div>
+          </details>
+        </div>
+      </section>
+      <section id="pipeline" class="pipeline">
+        <div class="section-top">
+          <div>
+            <span class="section-no">02 / SYSTEM DESIGN</span>
+            <h2 data-i="pipelineTitle"></h2>
+          </div>
+          <p data-i="pipelineSub"></p>
+        </div>
+        <div class="pipeline-tabs" id="pipeline-tabs"></div>
+        <div class="pipeline-detail">
+          <span id="step-number"></span>
+          <div>
+            <h3 id="step-title"></h3>
+            <p id="step-body"></p>
+          </div>
+          <div class="step-equation">
+            T<sub>request</sub> = T<sub>waiting</sub> + T<sub>decision</sub
+            ><br />+ T<sub>transfer</sub> + T<sub>execution</sub>
+          </div>
+        </div>
+        <details class="architecture">
+          <summary data-i="architecture"></summary>
+          <img
+            id="architecture-img"
+            alt="System architecture reproduced from the manuscript"
+            loading="lazy"
+          />
+        </details>
+      </section>
+      <section id="scale" class="scale editorial">
+        <div class="margin-label">
+          <span>03</span><small data-x="scaleLabel"></small>
+        </div>
+        <div class="scale-main">
+          <div class="section-top">
+            <div>
+              <p class="section-no">RQ1 / INPUT LENGTH</p>
+              <h2 data-x="scaleTitle"></h2>
+            </div>
+            <p data-x="scaleIntro"></p>
+          </div>
+          <div class="scale-layout">
+            <div class="plot-panel">
+              <div class="plot-toolbar">
+                <div class="segment" id="scale-metrics"></div>
+                <span class="plot-unit" id="scale-unit"></span>
+              </div>
+              <div id="trend-plot"></div>
+              <div class="scale-slider">
+                <label for="input-length" data-x="lengthLabel"></label
+                ><input
+                  id="input-length"
+                  type="range"
+                  min="0"
+                  max="4"
+                  step="1"
+                  value="0"
+                /><output id="input-length-value" for="input-length"></output>
+              </div>
+              <div id="plot-legend" class="plot-legend"></div>
+            </div>
+            <aside class="scale-reading">
+              <div class="data-kicker" data-x="selectedCondition"></div>
+              <h3 id="scale-selection"></h3>
+              <div id="scale-readout"></div>
+              <p id="scale-note"></p>
+              <small data-x="scaleSource"></small>
+            </aside>
+          </div>
+        </div>
+      </section>
+      <section id="explorer" class="explorer">
+        <div class="section-top">
+          <div>
+            <span class="section-no">04 / SERVICE OUTCOMES</span>
+            <h2 data-i="exploreTitle"></h2>
+          </div>
+          <p data-i="exploreSub"></p>
+        </div>
+        <div class="lab">
+          <aside class="controls">
+            <div class="control-heading" data-i="choose"></div>
+            <div id="experiments" class="experiment-list"></div>
+            <div class="divider"></div>
+            <div id="scenario-controls"></div>
+            <div class="divider"></div>
+            <label class="check"
+              ><input type="checkbox" id="local-models" /><span
+                data-i="showLocal"
+              ></span
+            ></label>
+            <p class="control-note" data-i="localNote"></p>
+            <button id="reset" class="text-button" data-i="reset"></button>
+          </aside>
+          <div class="chart-area">
+            <div class="chart-top">
+              <div>
+                <span class="chart-eyebrow" id="chart-context"></span>
+                <h3 id="chart-title"></h3>
+              </div>
+              <div class="metric-toggle">
+                <button
+                  id="completion"
+                  aria-pressed="true"
+                  data-i="completion"
+                ></button
+                ><button
+                  id="latency"
+                  aria-pressed="false"
+                  data-i="latency"
+                ></button>
+              </div>
+            </div>
+            <p id="metric-definition" class="metric-note"></p>
+            <div id="bar-chart" class="bar-chart" role="img"></div>
+            <div class="chart-axis">
+              <span id="axis-start"></span><span id="axis-end"></span>
+            </div>
+            <div class="insight" aria-live="polite">
+              <span>↗</span>
+              <p id="insight-text"></p>
+            </div>
+            <details class="data-details">
+              <summary data-i="table"></summary>
+              <div class="table-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th data-i="model"></th>
+                      <th id="table-rate"></th>
+                      <th id="table-time"></th>
+                    </tr>
+                  </thead>
+                  <tbody id="table-body"></tbody>
+                </table>
+              </div>
+            </details>
+            <div class="source-row">
+              <span id="source"></span
+              ><a
+                id="download"
+                download="edge-orchestration-data.json"
+                data-i="download"
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="catalog" class="catalog editorial">
+        <div class="margin-label">
+          <span>05</span><small data-x="catalogLabel"></small>
+        </div>
+        <div class="catalog-main">
+          <div class="section-top">
+            <div>
+              <p class="section-no">RQ4 / SERVICE CATALOG</p>
+              <h2 data-x="catalogTitle"></h2>
+            </div>
+            <p data-x="catalogIntro"></p>
+          </div>
+          <div class="catalog-toolbar">
+            <span data-x="catalogSize"></span>
+            <div id="catalog-sizes" class="segment"></div>
+          </div>
+          <div class="matrix-scroll">
+            <table class="matrix">
+              <thead>
+                <tr>
+                  <th data-x="interpreter"></th>
+                  <th data-x="seen"></th>
+                  <th data-x="unseen"></th>
+                  <th data-x="unsupported"></th>
+                  <th data-x="valid"></th>
+                  <th data-x="decisionTime"></th>
+                </tr>
+              </thead>
+              <tbody id="catalog-body"></tbody>
+            </table>
+          </div>
+          <div class="catalog-notes">
+            <p data-x="catalogNote1"></p>
+            <p data-x="catalogNote2"></p>
+          </div>
+          <div class="catalog-foot" data-x="catalogSource"></div>
+        </div>
+      </section>
+      <section class="boundaries">
+        <span class="section-no">06 / FINDINGS</span>
+        <h2 data-i="boundaryTitle"></h2>
+        <div class="boundary-grid">
+          <article>
+            <span class="signal green"></span>
+            <h3 data-i="b1Title"></h3>
+            <p data-i="b1"></p>
+            <button data-preset="load" data-i="b1Link"></button>
+          </article>
+          <article>
+            <span class="signal orange"></span>
+            <h3 data-i="b2Title"></h3>
+            <p data-i="b2"></p>
+            <button data-preset="contract" data-i="b2Link"></button>
+          </article>
+          <article>
+            <span class="signal blue"></span>
+            <h3 data-i="b3Title"></h3>
+            <p data-i="b3"></p>
+            <button data-preset="ocr" data-i="b3Link"></button>
+          </article>
+        </div>
+      </section>
+      <section id="reading" class="reading">
+        <div>
+          <span class="section-no">07 / THE PAPER</span>
+          <h2>
+            Replacing Large Language Models with Jev Decision Models for
+            Low-Latency Edge Service Orchestration
+          </h2>
+          <p class="authors">
+            Delong Li · Xu Wang · Haochen Gong · Rui Lang · Guangsheng Yu
+          </p>
+          <p>
+            School of Electrical, Mechanical and Biomedical Engineering<br />University
+            of Technology Sydney
+          </p>
+          <a
+            href="https://arxiv.org/pdf/2609.22753"
+            class="button dark pdf"
+            data-i="pdf"
+          ></a
+          ><button class="button pale" id="copy" data-i="copy"></button>
+          <p id="copy-status" aria-live="polite"></p>
+        </div>
+        <aside>
+          <h3 data-i="scopeTitle"></h3>
+          <p data-i="scope1"></p>
+          <p data-i="scope2"></p>
+          <p data-i="scope3"></p>
+          <small data-i="version"></small>
+        </aside>
+      </section>
+    </main>
+    <footer>
+      <span>EDGE / ORCHESTRATION</span><span data-i="footer"></span
+      ><a href="#top">↑</a>
+    </footer>
+    <script src="../script.js"></script>
+    <script src="../extended.js"></script>
+  </body>
+</html>

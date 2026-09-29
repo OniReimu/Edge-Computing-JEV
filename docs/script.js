@@ -1,25 +1,463 @@
-const zh=location.pathname.endsWith('/zh/')||location.pathname.endsWith('/zh/index.html');
-const base=zh?'../':'./'; const t=(en,cn)=>zh?cn:en;
-const copy={navExplore:t('Results','实验结果'),navSystem:t('System','系统设计'),navPaper:t('Paper ↗','论文 ↗'),eyebrow:t('INTERACTIVE RESEARCH / EDGE SERVICES','交互式研究展示 / 边缘服务'),headline:t('Decision Models for <br>Edge Service Orchestration','面向边缘服务编排的<br>决策模型替代研究'),intro:t('This study evaluates Jev as an alternative to generative LLMs for interpreting edge-service requests. It compares decision latency, interpretation accuracy, and service completion, and examines the effects of contract width and cache reuse.','本研究将 Jev 决策模型用于边缘服务请求的意图解析，与生成式 LLM 比较决策时延、解析准确率和服务完成率，并分析合约宽度与缓存复用对替代效果的影响。'),start:t('View experimental results ↓','查看实验结果 ↓'),pdf:t('Read the paper ↗','阅读论文 ↗'),requests:t('verified requests','已验证请求'),conditions:t('test conditions','测试条件'),gain:t('lower decision latency¹','决策时延降幅¹'),heroFoot:t('¹ Median decision latency versus the fastest tested LLM across 33 conditions; not end-to-end service latency.','¹ 33 个条件下相对被测最快 LLM 的决策时延中位数降幅，并非完整服务时延。'),visualTitle:t('THE ADMISSION PATH','服务接纳路径'),concept:t('CONCEPTUAL VIEW','流程示意'),interpret:t('INTERPRET THE REQUEST','解析请求'),validate:t('Validate','校验'),schedule:t('Schedule','调度'),execute:t('Execute','执行'),budget:t('REQUEST LATENCY BUDGET','请求各阶段的时延预算'),budgetNote:t('Waiting + interpretation + transfer + execution · schematic, not to scale','等待 + 解析 + 传输 + 执行 · 示意比例，不代表测量时长'),exploreTitle:t('Model performance across experimental conditions','不同实验条件下的模型表现'),exploreSub:t('Select an experimental condition to view the corresponding manuscript table values. Only measured results are shown; unmeasured conditions are not estimated.','选择实验条件可查看论文表格中的对应数值。页面仅展示已测结果，不对未测场景进行推算。'),choose:t('EXPERIMENT DIMENSION','实验维度'),showLocal:t('Include self-hosted models','显示自托管模型'),localNote:t('Hosted and local deployments differ in hardware and network paths.','托管与自托管部署的硬件和网络路径不同。'),reset:t('↺ Reset view','↺ 重置视图'),completion:t('Correctness','正确率'),latency:t('Latency','时延'),table:t('View table values and metric definitions','展开数值表与指标定义'),model:t('Interpreter','解析器'),download:t('Download table data ↓','下载表格数据 ↓'),pipelineTitle:t('Intent interpretation and service orchestration','意图解析与服务编排流程'),pipelineSub:t('All interpreters use the same contract interface, validator, and scheduler. The stage descriptions cover inputs, processing, constraint checks, and evaluation metrics.','各解析器使用相同的合约接口、校验器和调度器。阶段说明包括输入、处理方式、约束检查和评价指标。'),architecture:t('Open the original system architecture','展开论文原始系统架构图'),boundaryTitle:t('Main findings and applicability','主要结果与适用条件'),b1Title:t('Service completion under high load','高负载下的服务完成率'),b1:t('Under the short-contract conditions studied, lower interpretation latency reduces admission waiting. At 16 requests/s, Jev has an exact, on-time completion rate of 90.7%.','在本研究的短合约条件下，较低的解析时延有助于减少接纳等待。每秒 16 个请求时，Jev 的严格正确且按时完成率为 90.7%。'),b1Link:t('View high-load results ↗','查看高负载结果 ↗'),b2Title:t('Contract width and interpretation accuracy','合约宽度与解析准确率'),b2:t('With eight fields and medium constraint density, exact-match rates are 56.7% for Jev and 93.0% for DeepSeek.','八字段、中等约束密度下，Jev 的严格匹配率为 56.7%，DeepSeek 为 93.0%。'),b2Link:t('View eight-field results ↗','查看八字段结果 ↗'),b3Title:t('Cache reuse for repeated requests','重复请求的缓存复用'),b3:t('With caching enabled for repeated text, all four hosted interpreters have a correct OCR completion rate of 50.0%, equal to the recognizer’s accuracy in this condition.','对重复文本启用缓存后，真实 OCR 服务中四个托管解析器的正确完成率均为 50.0%，与该条件下识别器的准确率一致。'),b3Link:t('View cache-reuse results ↗','查看缓存复用结果 ↗'),scopeTitle:t('Scope and limitations','研究范围与局限'),scope1:t('Requests are generated and verified by language models. Each case is run once per interpreter; each service condition uses one arrival trace.','请求由语言模型生成并验证。每个案例对每个解析器运行一次；服务层每个条件使用一条到达轨迹。'),scope2:t('Hosted timings include provider and network effects, and sequential runs are subject to temporal variation. The measurements describe deployed services and cannot be attributed solely to internal model inference.','托管时延包含供应商与网络影响，顺序运行也受时段波动影响。测量结果反映被测服务的部署表现，不能单独归因于模型内部推理。'),scope3:t('The real service includes three workers and one OCR family. API fees exclude local compute and communication. This page presents the manuscript; it does not independently validate its experiments.','真实服务包含三个工作节点和一个 OCR 服务族；API 费用不含本地计算与通信。本页介绍论文结果，不构成对原始实验的独立复核。'),version:t('Manuscript version: 27 September 2026 · No publication status is asserted.','稿件版本：2026 年 9 月 27 日 · 未标注正式发表状态。'),copy:t('Copy citation','复制引用'),footer:t('Research manuscript · University of Technology Sydney','研究稿件 · 悉尼科技大学')};
-document.documentElement.lang=zh?'zh-CN':'en';document.querySelectorAll('[data-i]').forEach(el=>{if(el.dataset.i==='headline')el.innerHTML=copy.headline;else el.textContent=copy[el.dataset.i]||''});
-document.querySelectorAll('.pdf').forEach(a=>{a.href='https://arxiv.org/pdf/2609.22753';a.target='_blank';a.rel='noopener'});const language=document.querySelector('#language');language.textContent=zh?'EN':'中文';language.href=zh?'../':'zh/';document.querySelector('#architecture-img').src=base+'assets/system-architecture.png';document.querySelector('#download').href=base+'assets/explorer-data.json';
-const state={experiment:'load',metric:'completion',load:'4',deadline:'2',fields:'4',arrival:'steady',text:'changing',cache:'off',local:false};
-const modes={load:t('Arrival load','到达负载'),deadline:t('Deadline','截止时间'),contract:t('Contract width','合约宽度'),ocr:t('Real OCR','真实 OCR')};
+const zh =
+  location.pathname.endsWith("/zh/") ||
+  location.pathname.endsWith("/zh/index.html");
+const base = zh ? "../" : "./";
+const t = (en, cn) => (zh ? cn : en);
+const copy = {
+  navExplore: t("Results", "实验结果"),
+  navSystem: t("System", "系统设计"),
+  navPaper: t("Paper ↗", "论文 ↗"),
+  eyebrow: t(
+    "INTERACTIVE RESEARCH / EDGE SERVICES",
+    "交互式研究展示 / 边缘服务",
+  ),
+  headline: t(
+    "Decision Models for <br>Edge Service Orchestration",
+    "面向边缘服务编排的<br>决策模型替代研究",
+  ),
+  intro: t(
+    "This study evaluates Jev as an alternative to generative LLMs for interpreting edge-service requests. It compares decision latency, interpretation accuracy, and service completion, and examines the effects of contract width and cache reuse.",
+    "本研究将 Jev 决策模型用于边缘服务请求的意图解析，与生成式 LLM 比较决策时延、解析准确率和服务完成率，并分析合约宽度与缓存复用对替代效果的影响。",
+  ),
+  start: t("View experimental results ↓", "查看实验结果 ↓"),
+  pdf: t("Read the paper ↗", "阅读论文 ↗"),
+  requests: t("verified requests", "已验证请求"),
+  conditions: t("test conditions", "测试条件"),
+  gain: t("lower decision latency¹", "决策时延降幅¹"),
+  heroFoot: t(
+    "¹ Median decision latency versus the fastest tested LLM across 33 conditions; not end-to-end service latency.",
+    "¹ 33 个条件下相对被测最快 LLM 的决策时延中位数降幅，并非完整服务时延。",
+  ),
+  visualTitle: t("THE ADMISSION PATH", "服务接纳路径"),
+  concept: t("CONCEPTUAL VIEW", "流程示意"),
+  interpret: t("INTERPRET THE REQUEST", "解析请求"),
+  validate: t("Validate", "校验"),
+  schedule: t("Schedule", "调度"),
+  execute: t("Execute", "执行"),
+  budget: t("REQUEST LATENCY BUDGET", "请求各阶段的时延预算"),
+  budgetNote: t(
+    "Waiting + interpretation + transfer + execution · schematic, not to scale",
+    "等待 + 解析 + 传输 + 执行 · 示意比例，不代表测量时长",
+  ),
+  exploreTitle: t(
+    "Model performance across experimental conditions",
+    "不同实验条件下的模型表现",
+  ),
+  exploreSub: t(
+    "Select an experimental condition to view the corresponding manuscript table values. Only measured results are shown; unmeasured conditions are not estimated.",
+    "选择实验条件可查看论文表格中的对应数值。页面仅展示已测结果，不对未测场景进行推算。",
+  ),
+  choose: t("EXPERIMENT DIMENSION", "实验维度"),
+  showLocal: t("Include self-hosted models", "显示自托管模型"),
+  localNote: t(
+    "Hosted and local deployments differ in hardware and network paths.",
+    "托管与自托管部署的硬件和网络路径不同。",
+  ),
+  reset: t("↺ Reset view", "↺ 重置视图"),
+  completion: t("Correctness", "正确率"),
+  latency: t("Latency", "时延"),
+  table: t("View table values and metric definitions", "展开数值表与指标定义"),
+  model: t("Interpreter", "解析器"),
+  download: t("Download table data ↓", "下载表格数据 ↓"),
+  pipelineTitle: t(
+    "Intent interpretation and service orchestration",
+    "意图解析与服务编排流程",
+  ),
+  pipelineSub: t(
+    "All interpreters use the same contract interface, validator, and scheduler. The stage descriptions cover inputs, processing, constraint checks, and evaluation metrics.",
+    "各解析器使用相同的合约接口、校验器和调度器。阶段说明包括输入、处理方式、约束检查和评价指标。",
+  ),
+  architecture: t(
+    "Open the original system architecture",
+    "展开论文原始系统架构图",
+  ),
+  boundaryTitle: t("Main findings and applicability", "主要结果与适用条件"),
+  b1Title: t("Service completion under high load", "高负载下的服务完成率"),
+  b1: t(
+    "Under the short-contract conditions studied, lower interpretation latency reduces admission waiting. At 16 requests/s, Jev has an exact, on-time completion rate of 90.7%.",
+    "在本研究的短合约条件下，较低的解析时延有助于减少接纳等待。每秒 16 个请求时，Jev 的严格正确且按时完成率为 90.7%。",
+  ),
+  b1Link: t("View high-load results ↗", "查看高负载结果 ↗"),
+  b2Title: t(
+    "Contract width and interpretation accuracy",
+    "合约宽度与解析准确率",
+  ),
+  b2: t(
+    "With eight fields and medium constraint density, exact-match rates are 56.7% for Jev and 93.0% for DeepSeek.",
+    "八字段、中等约束密度下，Jev 的严格匹配率为 56.7%，DeepSeek 为 93.0%。",
+  ),
+  b2Link: t("View eight-field results ↗", "查看八字段结果 ↗"),
+  b3Title: t("Cache reuse for repeated requests", "重复请求的缓存复用"),
+  b3: t(
+    "With caching enabled for repeated text, all four hosted interpreters have a correct OCR completion rate of 50.0%, equal to the recognizer’s accuracy in this condition.",
+    "对重复文本启用缓存后，真实 OCR 服务中四个托管解析器的正确完成率均为 50.0%，与该条件下识别器的准确率一致。",
+  ),
+  b3Link: t("View cache-reuse results ↗", "查看缓存复用结果 ↗"),
+  scopeTitle: t("Scope and limitations", "研究范围与局限"),
+  scope1: t(
+    "Requests are generated and verified by language models. Each case is run once per interpreter; each service condition uses one arrival trace.",
+    "请求由语言模型生成并验证。每个案例对每个解析器运行一次；服务层每个条件使用一条到达轨迹。",
+  ),
+  scope2: t(
+    "Hosted timings include provider and network effects, and sequential runs are subject to temporal variation. The measurements describe deployed services and cannot be attributed solely to internal model inference.",
+    "托管时延包含供应商与网络影响，顺序运行也受时段波动影响。测量结果反映被测服务的部署表现，不能单独归因于模型内部推理。",
+  ),
+  scope3: t(
+    "The real service includes three workers and one OCR family. API fees exclude local compute and communication. This page presents the manuscript; it does not independently validate its experiments.",
+    "真实服务包含三个工作节点和一个 OCR 服务族；API 费用不含本地计算与通信。本页介绍论文结果，不构成对原始实验的独立复核。",
+  ),
+  version: t(
+    "Manuscript version: 27 September 2026 · No publication status is asserted.",
+    "稿件版本：2026 年 9 月 27 日 · 未标注正式发表状态。",
+  ),
+  copy: t("Copy citation", "复制引用"),
+  footer: t(
+    "Research manuscript · University of Technology Sydney",
+    "研究稿件 · 悉尼科技大学",
+  ),
+};
+document.documentElement.lang = zh ? "zh-CN" : "en";
+document.querySelectorAll("[data-i]").forEach((el) => {
+  if (el.dataset.i === "headline") el.innerHTML = copy.headline;
+  else el.textContent = copy[el.dataset.i] || "";
+});
+document.querySelectorAll(".pdf").forEach((a) => {
+  a.href = "https://arxiv.org/pdf/2609.22753";
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+const language = document.querySelector("#language");
+language.textContent = zh ? "EN" : "中文";
+language.href = zh ? "../" : "zh/";
+document.querySelector("#architecture-img").src =
+  base + "assets/system-architecture.png";
+document.querySelector("#download").href = base + "assets/explorer-data.json";
+const state = {
+  experiment: "load",
+  metric: "completion",
+  load: "4",
+  deadline: "2",
+  fields: "4",
+  arrival: "steady",
+  text: "changing",
+  cache: "off",
+  local: false,
+};
+const modes = {
+  load: t("Arrival load", "到达负载"),
+  deadline: t("Deadline", "截止时间"),
+  contract: t("Contract width", "合约宽度"),
+  ocr: t("Real OCR", "真实 OCR"),
+};
 let data;
-const $=id=>document.getElementById(id);
-function choose(label,key,options){const wrap=document.createElement('div');const lab=document.createElement('label');lab.className='control-label';lab.htmlFor='select-'+key;lab.textContent=label;const select=document.createElement('select');select.id=lab.htmlFor;for(const [v,text] of options){const o=new Option(text,v);o.selected=state[key]===v;select.add(o)}select.addEventListener('change',()=>{state[key]=select.value;renderChart()});wrap.append(lab,select);$('scenario-controls').append(wrap)}
-function controls(){ $('experiments').innerHTML='';Object.entries(modes).forEach(([key,label],i)=>{const b=document.createElement('button');b.innerHTML=`<span>0${i+1}</span>${label}`;b.setAttribute('aria-pressed',state.experiment===key);b.onclick=()=>{state.experiment=key;controls();renderChart()};$('experiments').append(b)});$('scenario-controls').innerHTML='';if(state.experiment==='load')choose(t('Requests per second','每秒到达请求数'),'load',['1','2','4','8','16'].map(v=>[v,v+' req/s']));if(state.experiment==='deadline')choose(t('Request deadline','请求截止时间'),'deadline',['0.5','1','2','4'].map(v=>[v,v+' s']));if(state.experiment==='contract')choose(t('Fields · medium constraint density','字段数 · 中等约束密度'),'fields',['4','6','8'].map(v=>[v,v+t(' fields',' 个字段')]));if(state.experiment==='ocr'){choose(t('Arrival pattern','到达模式'),'arrival',[['steady',t('Steady','平稳到达')],['bursty',t('Bursty','突发到达')]]);choose(t('Request descriptions','请求描述'),'text',[['changing',t('Changing text','变化文本')],['repeated',t('Repeated text','重复文本')]]);choose(t('Semantic cache','语义缓存'),'cache',[['off',t('Off','关闭')],['on',t('On','开启')]])}}
-function row(){if(state.experiment==='load')return data.load[state.load];if(state.experiment==='deadline')return data.deadline[state.deadline];if(state.experiment==='contract')return data.contract[state.fields];return data.ocr[state.arrival][`${state.text}, ${state.cache}`]}
-function insight(r){let s='';if(state.experiment==='contract'){s=t(`At ${state.fields} fields, Jev exact match is ${(r.completion[0]*100).toFixed(1)}% versus ${(r.completion[3]*100).toFixed(1)}% for DeepSeek. Median decision times are ${r.latency[0].toFixed(3)} s and ${r.latency[3].toFixed(3)} s. Across the tested conditions, the accuracy difference increases with the number of contract fields.`,`${state.fields} 个字段时，Jev 与 DeepSeek 的严格匹配率分别为 ${(r.completion[0]*100).toFixed(1)}% 和 ${(r.completion[3]*100).toFixed(1)}%，决策时延中位数分别为 ${r.latency[0].toFixed(3)} 秒和 ${r.latency[3].toFixed(3)} 秒。在被测条件下，字段数增加伴随着两者准确率差距的扩大。`)}else if(state.experiment==='ocr'){s=state.text==='repeated'&&state.cache==='on'?t('With cache reuse, all four hosted interpreters have a correct OCR completion rate of 50.0%, equal to the recognizer’s accuracy in this condition. Repeated descriptions reduce new interpretation calls and narrow the latency differences between models.','缓存复用条件下，四个托管解析器的 OCR 正确完成率均为 50.0%，与该条件下识别器的准确率一致。重复描述减少了新的解析调用，模型间的时延差距随之缩小。'):t(`Jev completes ${(r.completion[0]*100).toFixed(1)}% correctly; DeepSeek ${(r.completion[3]*100).toFixed(1)}%. OCR recognition accuracy bounds correct completion. There are no cache hits in the changing-text conditions; differences between the corresponding repeated runs include temporal variation.`,`Jev 与 DeepSeek 的正确完成率分别为 ${(r.completion[0]*100).toFixed(1)}% 和 ${(r.completion[3]*100).toFixed(1)}%。OCR 识别准确率构成正确完成率的上限。变化文本条件下无缓存命中；相应重复运行间的差异包含时段波动。`)}else{const gap=(r.completion[0]-r.completion[3])*100;s=t(`Jev: ${(r.completion[0]*100).toFixed(1)}% · DeepSeek: ${(r.completion[3]*100).toFixed(1)}%. Jev is ${Math.abs(gap).toFixed(1)} percentage points ${gap>=0?'higher':'lower'} on exact, on-time completion in this condition. This difference is measured under the selected condition and does not predict capacity at untested loads.`,`Jev：${(r.completion[0]*100).toFixed(1)}%；DeepSeek：${(r.completion[3]*100).toFixed(1)}%。此条件下，Jev 的严格按时完成率${gap>=0?'高':'低'} ${Math.abs(gap).toFixed(1)} 个百分点。该差值来自当前实验条件，不用于预测未测负载下的系统容量。`)}if(state.metric==='latency'&&state.experiment!=='contract')s+=' '+t('Each p95 is calculated from that model’s own successful completions and should be interpreted alongside the completion rate.','p95 分别基于各模型自身成功完成的请求计算，需结合完成率比较，不能单独用于评价整体服务表现。');return s}
-function renderChart(){const r=row(),contract=state.experiment==='contract',isRate=state.metric==='completion';const indices=state.local?[0,3,4,5,1,2,6]:[0,3,4,5];const metric=r[state.metric];const max=isRate?1:Math.max(.1,...indices.map(i=>metric[i]||0))*1.12;
-$('completion').setAttribute('aria-pressed',isRate);$('latency').setAttribute('aria-pressed',!isRate);
-const rateTitle=contract?t('Exact contract match','合约严格匹配率'):state.experiment==='ocr'?t('Correct OCR completion','OCR 正确完成率'):t('Exact, on-time completion','严格正确且按时完成率');const timeTitle=contract?t('Median decision latency','决策时延中位数'):t('p95 request latency','完整请求 p95 时延');$('chart-title').textContent=isRate?rateTitle:timeTitle;
-$('chart-context').textContent=state.experiment==='load'?`${state.load} req/s · D = 2 s · 4 slots`:state.experiment==='deadline'?`D = ${state.deadline} s · 4 req/s · 4 slots`:contract?`F = ${state.fields} · ${t('medium constraint density','中等约束密度')}`:`${t(state.arrival,state.arrival==='steady'?'平稳到达':'突发到达')} · ${t(state.text,state.text==='changing'?'变化文本':'重复文本')} · ${t('cache','缓存')} ${t(state.cache,state.cache==='on'?'开':'关')}`;
-$('metric-definition').textContent=contract?t('RQ3 · All contract fields must match. Latency measures interpretation only.','RQ3 · 所有合约字段均匹配才计正确；时延仅衡量意图解析。'):state.experiment==='ocr'?t('RQ5 Part B · Real OCR execution. Correct completion requires accurate recognition and on-time service.','RQ5 B 部分 · 真实 OCR 执行。正确完成要求识别输出正确，且服务按时完成。'):t('RQ5 Part A · Live interpretation with modeled service execution. Semantic exactness and deadline compliance are both required.','RQ5 A 部分 · 真实意图解析与模拟服务执行。须同时满足语义严格正确与按时完成。');
-$('bar-chart').innerHTML='';$('bar-chart').setAttribute('aria-label',`${$('chart-title').textContent}. `+indices.map(i=>`${data.models[i]}: ${metric[i]===null?'N/A':isRate?(metric[i]*100).toFixed(1)+'%':metric[i]+' s'}`).join('; '));indices.forEach(i=>{const br=document.createElement('div');br.className='bar-row';const v=metric[i];br.innerHTML=`<span class="bar-label">${data.models[i]}</span><div class="bar-track"><div class="bar-fill ${i===0?'jev':''}" style="width:${v===null?0:v/max*100}%"></div></div><span class="bar-value">${v===null?'—':isRate?(v*100).toFixed(1)+'%':v.toFixed(contract?3:2)+' s'}</span>`;$('bar-chart').append(br)});$('axis-start').textContent=isRate?'0%':'0 s';$('axis-end').textContent=isRate?'100%':max.toFixed(2)+' s';$('insight-text').textContent=insight(r);
-$('table-rate').textContent=rateTitle;$('table-time').textContent=timeTitle;$('table-body').innerHTML=indices.map(i=>`<tr><td>${data.models[i]}</td><td>${(r.completion[i]*100).toFixed(1)}%</td><td>${r.latency[i]===null?t('No completions','无完成请求'):r.latency[i].toFixed(contract?3:2)+' s'}</td></tr>`).join('');$('source').textContent=t('Source: manuscript table ','来源：论文表格 ')+(contract?'RQ3':state.experiment==='ocr'?'RQ5 / Part B':'RQ5 / Part A')+t(' · point estimates; intervals in the paper',' · 点估计；区间见论文');}
-const steps=[[t('01 / Request','01 / 请求'),t('Request arrival and deadline','请求到达与截止时间'),t('The inputs are a natural-language request and the current service catalog. Total time from arrival to completion includes queue waiting, interpretation, transfer, and service execution.','输入包括自然语言请求及当前服务目录。从请求到达到执行完成的总时延包含队列等待、意图解析、传输和服务执行。')],[t('02 / Interpret','02 / 解析'),t('Intent interpretation through a shared interface','共同接口下的意图解析'),t('Jev returns bounded choices; a generative LLM returns structured fields. The study compares deployed interpretation services under a common intent interface.','Jev 返回有限候选中的选择，生成式 LLM 返回结构化字段。研究在共同意图接口下比较不同解析服务的部署表现。')],[t('03 / Admit','03 / 接纳'),t('Constraint validation and service admission','约束校验与服务接纳'),t('The shared validator and scheduler check placement, tier, priority, and predicted completion after interpretation. Unsupported or expired requests are rejected.','共用校验器与调度器在解析后检查放置、服务档位、优先级和预计完成时间。不支持或已超时的请求被拒绝。')],[t('04 / Deliver','04 / 交付'),t('Service execution and outcome evaluation','服务执行与结果评价'),t('Modeled execution is used to evaluate the admission path. The real OCR service also checks recognized text. Intent fidelity, execution compliance, and output correctness are evaluated separately.','模拟执行用于考察接纳路径；真实 OCR 服务还会检查识别文本。意图忠实度、执行合规和实际输出正确性分别衡量。')]];
-function step(n){$('pipeline-tabs').innerHTML='';steps.forEach((s,i)=>{const b=document.createElement('button');b.textContent=s[0];b.setAttribute('aria-pressed',i===n);b.onclick=()=>step(i);$('pipeline-tabs').append(b)});$('step-number').textContent='0'+(n+1);$('step-title').textContent=steps[n][1];$('step-body').textContent=steps[n][2]};step(0);
-for(const metric of ['completion','latency'])$(metric).onclick=()=>{state.metric=metric;renderChart()};$('local-models').onchange=e=>{state.local=e.target.checked;renderChart()};$('reset').onclick=()=>{Object.assign(state,{experiment:'load',metric:'completion',load:'4',deadline:'2',fields:'4',arrival:'steady',text:'changing',cache:'off',local:false});$('local-models').checked=false;controls();renderChart()};document.querySelectorAll('[data-preset]').forEach(b=>b.onclick=()=>{state.experiment=b.dataset.preset;state.metric='completion';if(state.experiment==='load')state.load='16';if(state.experiment==='contract')state.fields='8';if(state.experiment==='ocr'){state.arrival='steady';state.text='repeated';state.cache='on'}controls();renderChart();$('explorer').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'})});
-$('copy').onclick=async()=>{const citation='@unpublished{li2026edgeorchestration,\n  title = {Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration},\n  author = {Li, Delong and Wang, Xu and Gong, Haochen and Lang, Rui and Yu, Guangsheng},\n  year = {2026},\n  note = {Research manuscript}\n}';try{await navigator.clipboard.writeText(citation);$('copy-status').textContent=t('Citation copied.','引用已复制。')}catch{$('copy-status').textContent=citation}};
-fetch(base+'assets/explorer-data.json').then(r=>{if(!r.ok)throw Error('data unavailable');return r.json()}).then(d=>{data=d;controls();renderChart()}).catch(()=>{$('bar-chart').textContent=t('Data could not be loaded. Please reload or read the paper PDF.','数据未能加载，请刷新页面或阅读论文 PDF。')});
+const $ = (id) => document.getElementById(id);
+function choose(label, key, options) {
+  const wrap = document.createElement("div");
+  const lab = document.createElement("label");
+  lab.className = "control-label";
+  lab.htmlFor = "select-" + key;
+  lab.textContent = label;
+  const select = document.createElement("select");
+  select.id = lab.htmlFor;
+  for (const [v, text] of options) {
+    const o = new Option(text, v);
+    o.selected = state[key] === v;
+    select.add(o);
+  }
+  select.addEventListener("change", () => {
+    state[key] = select.value;
+    renderChart();
+  });
+  wrap.append(lab, select);
+  $("scenario-controls").append(wrap);
+}
+function controls() {
+  $("experiments").innerHTML = "";
+  Object.entries(modes).forEach(([key, label], i) => {
+    const b = document.createElement("button");
+    b.innerHTML = `<span>0${i + 1}</span>${label}`;
+    b.setAttribute("aria-pressed", state.experiment === key);
+    b.onclick = () => {
+      state.experiment = key;
+      controls();
+      renderChart();
+    };
+    $("experiments").append(b);
+  });
+  $("scenario-controls").innerHTML = "";
+  if (state.experiment === "load")
+    choose(
+      t("Requests per second", "每秒到达请求数"),
+      "load",
+      ["1", "2", "4", "8", "16"].map((v) => [v, v + " req/s"]),
+    );
+  if (state.experiment === "deadline")
+    choose(
+      t("Request deadline", "请求截止时间"),
+      "deadline",
+      ["0.5", "1", "2", "4"].map((v) => [v, v + " s"]),
+    );
+  if (state.experiment === "contract")
+    choose(
+      t("Fields · medium constraint density", "字段数 · 中等约束密度"),
+      "fields",
+      ["4", "6", "8"].map((v) => [v, v + t(" fields", " 个字段")]),
+    );
+  if (state.experiment === "ocr") {
+    choose(t("Arrival pattern", "到达模式"), "arrival", [
+      ["steady", t("Steady", "平稳到达")],
+      ["bursty", t("Bursty", "突发到达")],
+    ]);
+    choose(t("Request descriptions", "请求描述"), "text", [
+      ["changing", t("Changing text", "变化文本")],
+      ["repeated", t("Repeated text", "重复文本")],
+    ]);
+    choose(t("Semantic cache", "语义缓存"), "cache", [
+      ["off", t("Off", "关闭")],
+      ["on", t("On", "开启")],
+    ]);
+  }
+}
+function row() {
+  if (state.experiment === "load") return data.load[state.load];
+  if (state.experiment === "deadline") return data.deadline[state.deadline];
+  if (state.experiment === "contract") return data.contract[state.fields];
+  return data.ocr[state.arrival][`${state.text}, ${state.cache}`];
+}
+function insight(r) {
+  let s = "";
+  if (state.experiment === "contract") {
+    s = t(
+      `At ${state.fields} fields, Jev exact match is ${(r.completion[0] * 100).toFixed(1)}% versus ${(r.completion[3] * 100).toFixed(1)}% for DeepSeek. Median decision times are ${r.latency[0].toFixed(3)} s and ${r.latency[3].toFixed(3)} s. Across the tested conditions, the accuracy difference increases with the number of contract fields.`,
+      `${state.fields} 个字段时，Jev 与 DeepSeek 的严格匹配率分别为 ${(r.completion[0] * 100).toFixed(1)}% 和 ${(r.completion[3] * 100).toFixed(1)}%，决策时延中位数分别为 ${r.latency[0].toFixed(3)} 秒和 ${r.latency[3].toFixed(3)} 秒。在被测条件下，字段数增加伴随着两者准确率差距的扩大。`,
+    );
+  } else if (state.experiment === "ocr") {
+    s =
+      state.text === "repeated" && state.cache === "on"
+        ? t(
+            "With cache reuse, all four hosted interpreters have a correct OCR completion rate of 50.0%, equal to the recognizer’s accuracy in this condition. Repeated descriptions reduce new interpretation calls and narrow the latency differences between models.",
+            "缓存复用条件下，四个托管解析器的 OCR 正确完成率均为 50.0%，与该条件下识别器的准确率一致。重复描述减少了新的解析调用，模型间的时延差距随之缩小。",
+          )
+        : t(
+            `Jev completes ${(r.completion[0] * 100).toFixed(1)}% correctly; DeepSeek ${(r.completion[3] * 100).toFixed(1)}%. OCR recognition accuracy bounds correct completion. There are no cache hits in the changing-text conditions; differences between the corresponding repeated runs include temporal variation.`,
+            `Jev 与 DeepSeek 的正确完成率分别为 ${(r.completion[0] * 100).toFixed(1)}% 和 ${(r.completion[3] * 100).toFixed(1)}%。OCR 识别准确率构成正确完成率的上限。变化文本条件下无缓存命中；相应重复运行间的差异包含时段波动。`,
+          );
+  } else {
+    const gap = (r.completion[0] - r.completion[3]) * 100;
+    s = t(
+      `Jev: ${(r.completion[0] * 100).toFixed(1)}% · DeepSeek: ${(r.completion[3] * 100).toFixed(1)}%. Jev is ${Math.abs(gap).toFixed(1)} percentage points ${gap >= 0 ? "higher" : "lower"} on exact, on-time completion in this condition. This difference is measured under the selected condition and does not predict capacity at untested loads.`,
+      `Jev：${(r.completion[0] * 100).toFixed(1)}%；DeepSeek：${(r.completion[3] * 100).toFixed(1)}%。此条件下，Jev 的严格按时完成率${gap >= 0 ? "高" : "低"} ${Math.abs(gap).toFixed(1)} 个百分点。该差值来自当前实验条件，不用于预测未测负载下的系统容量。`,
+    );
+  }
+  if (state.metric === "latency" && state.experiment !== "contract")
+    s +=
+      " " +
+      t(
+        "Each p95 is calculated from that model’s own successful completions and should be interpreted alongside the completion rate.",
+        "p95 分别基于各模型自身成功完成的请求计算，需结合完成率比较，不能单独用于评价整体服务表现。",
+      );
+  return s;
+}
+function renderChart() {
+  const r = row(),
+    contract = state.experiment === "contract",
+    isRate = state.metric === "completion";
+  const indices = state.local ? [0, 3, 4, 5, 1, 2, 6] : [0, 3, 4, 5];
+  const metric = r[state.metric];
+  const max = isRate
+    ? 1
+    : Math.max(0.1, ...indices.map((i) => metric[i] || 0)) * 1.12;
+  $("completion").setAttribute("aria-pressed", isRate);
+  $("latency").setAttribute("aria-pressed", !isRate);
+  const rateTitle = contract
+    ? t("Exact contract match", "合约严格匹配率")
+    : state.experiment === "ocr"
+      ? t("Correct OCR completion", "OCR 正确完成率")
+      : t("Exact, on-time completion", "严格正确且按时完成率");
+  const timeTitle = contract
+    ? t("Median decision latency", "决策时延中位数")
+    : t("p95 request latency", "完整请求 p95 时延");
+  $("chart-title").textContent = isRate ? rateTitle : timeTitle;
+  $("chart-context").textContent =
+    state.experiment === "load"
+      ? `${state.load} req/s · D = 2 s · 4 slots`
+      : state.experiment === "deadline"
+        ? `D = ${state.deadline} s · 4 req/s · 4 slots`
+        : contract
+          ? `F = ${state.fields} · ${t("medium constraint density", "中等约束密度")}`
+          : `${t(state.arrival, state.arrival === "steady" ? "平稳到达" : "突发到达")} · ${t(state.text, state.text === "changing" ? "变化文本" : "重复文本")} · ${t("cache", "缓存")} ${t(state.cache, state.cache === "on" ? "开" : "关")}`;
+  $("metric-definition").textContent = contract
+    ? t(
+        "RQ3 · All contract fields must match. Latency measures interpretation only.",
+        "RQ3 · 所有合约字段均匹配才计正确；时延仅衡量意图解析。",
+      )
+    : state.experiment === "ocr"
+      ? t(
+          "RQ5 Part B · Real OCR execution. Correct completion requires accurate recognition and on-time service.",
+          "RQ5 B 部分 · 真实 OCR 执行。正确完成要求识别输出正确，且服务按时完成。",
+        )
+      : t(
+          "RQ5 Part A · Live interpretation with modeled service execution. Semantic exactness and deadline compliance are both required.",
+          "RQ5 A 部分 · 真实意图解析与模拟服务执行。须同时满足语义严格正确与按时完成。",
+        );
+  $("bar-chart").innerHTML = "";
+  $("bar-chart").setAttribute(
+    "aria-label",
+    `${$("chart-title").textContent}. ` +
+      indices
+        .map(
+          (i) =>
+            `${data.models[i]}: ${metric[i] === null ? "N/A" : isRate ? (metric[i] * 100).toFixed(1) + "%" : metric[i] + " s"}`,
+        )
+        .join("; "),
+  );
+  indices.forEach((i) => {
+    const br = document.createElement("div");
+    br.className = "bar-row";
+    const v = metric[i];
+    br.innerHTML = `<span class="bar-label">${data.models[i]}</span><div class="bar-track"><div class="bar-fill ${i === 0 ? "jev" : ""}" style="width:${v === null ? 0 : (v / max) * 100}%"></div></div><span class="bar-value">${v === null ? "—" : isRate ? (v * 100).toFixed(1) + "%" : v.toFixed(contract ? 3 : 2) + " s"}</span>`;
+    $("bar-chart").append(br);
+  });
+  $("axis-start").textContent = isRate ? "0%" : "0 s";
+  $("axis-end").textContent = isRate ? "100%" : max.toFixed(2) + " s";
+  $("insight-text").textContent = insight(r);
+  $("table-rate").textContent = rateTitle;
+  $("table-time").textContent = timeTitle;
+  $("table-body").innerHTML = indices
+    .map(
+      (i) =>
+        `<tr><td>${data.models[i]}</td><td>${(r.completion[i] * 100).toFixed(1)}%</td><td>${r.latency[i] === null ? t("No completions", "无完成请求") : r.latency[i].toFixed(contract ? 3 : 2) + " s"}</td></tr>`,
+    )
+    .join("");
+  $("source").textContent =
+    t("Source: manuscript table ", "来源：论文表格 ") +
+    (contract
+      ? "RQ3"
+      : state.experiment === "ocr"
+        ? "RQ5 / Part B"
+        : "RQ5 / Part A") +
+    t(" · point estimates; intervals in the paper", " · 点估计；区间见论文");
+}
+const steps = [
+  [
+    t("01 / Request", "01 / 请求"),
+    t("Request arrival and deadline", "请求到达与截止时间"),
+    t(
+      "The inputs are a natural-language request and the current service catalog. Total time from arrival to completion includes queue waiting, interpretation, transfer, and service execution.",
+      "输入包括自然语言请求及当前服务目录。从请求到达到执行完成的总时延包含队列等待、意图解析、传输和服务执行。",
+    ),
+  ],
+  [
+    t("02 / Interpret", "02 / 解析"),
+    t(
+      "Intent interpretation through a shared interface",
+      "共同接口下的意图解析",
+    ),
+    t(
+      "Jev returns bounded choices; a generative LLM returns structured fields. The study compares deployed interpretation services under a common intent interface.",
+      "Jev 返回有限候选中的选择，生成式 LLM 返回结构化字段。研究在共同意图接口下比较不同解析服务的部署表现。",
+    ),
+  ],
+  [
+    t("03 / Admit", "03 / 接纳"),
+    t("Constraint validation and service admission", "约束校验与服务接纳"),
+    t(
+      "The shared validator and scheduler check placement, tier, priority, and predicted completion after interpretation. Unsupported or expired requests are rejected.",
+      "共用校验器与调度器在解析后检查放置、服务档位、优先级和预计完成时间。不支持或已超时的请求被拒绝。",
+    ),
+  ],
+  [
+    t("04 / Deliver", "04 / 交付"),
+    t("Service execution and outcome evaluation", "服务执行与结果评价"),
+    t(
+      "Modeled execution is used to evaluate the admission path. The real OCR service also checks recognized text. Intent fidelity, execution compliance, and output correctness are evaluated separately.",
+      "模拟执行用于考察接纳路径；真实 OCR 服务还会检查识别文本。意图忠实度、执行合规和实际输出正确性分别衡量。",
+    ),
+  ],
+];
+function step(n) {
+  $("pipeline-tabs").innerHTML = "";
+  steps.forEach((s, i) => {
+    const b = document.createElement("button");
+    b.textContent = s[0];
+    b.setAttribute("aria-pressed", i === n);
+    b.onclick = () => step(i);
+    $("pipeline-tabs").append(b);
+  });
+  $("step-number").textContent = "0" + (n + 1);
+  $("step-title").textContent = steps[n][1];
+  $("step-body").textContent = steps[n][2];
+}
+step(0);
+for (const metric of ["completion", "latency"])
+  $(metric).onclick = () => {
+    state.metric = metric;
+    renderChart();
+  };
+$("local-models").onchange = (e) => {
+  state.local = e.target.checked;
+  renderChart();
+};
+$("reset").onclick = () => {
+  Object.assign(state, {
+    experiment: "load",
+    metric: "completion",
+    load: "4",
+    deadline: "2",
+    fields: "4",
+    arrival: "steady",
+    text: "changing",
+    cache: "off",
+    local: false,
+  });
+  $("local-models").checked = false;
+  controls();
+  renderChart();
+};
+document.querySelectorAll("[data-preset]").forEach(
+  (b) =>
+    (b.onclick = () => {
+      state.experiment = b.dataset.preset;
+      state.metric = "completion";
+      if (state.experiment === "load") state.load = "16";
+      if (state.experiment === "contract") state.fields = "8";
+      if (state.experiment === "ocr") {
+        state.arrival = "steady";
+        state.text = "repeated";
+        state.cache = "on";
+      }
+      controls();
+      renderChart();
+      $("explorer").scrollIntoView({
+        behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
+          ? "instant"
+          : "smooth",
+      });
+    }),
+);
+$("copy").onclick = async () => {
+  const citation =
+    "@unpublished{li2026edgeorchestration,\n  title = {Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration},\n  author = {Li, Delong and Wang, Xu and Gong, Haochen and Lang, Rui and Yu, Guangsheng},\n  year = {2026},\n  note = {Research manuscript}\n}";
+  try {
+    await navigator.clipboard.writeText(citation);
+    $("copy-status").textContent = t("Citation copied.", "引用已复制。");
+  } catch {
+    $("copy-status").textContent = citation;
+  }
+};
+fetch(base + "assets/explorer-data.json")
+  .then((r) => {
+    if (!r.ok) throw Error("data unavailable");
+    return r.json();
+  })
+  .then((d) => {
+    data = d;
+    controls();
+    renderChart();
+  })
+  .catch(() => {
+    $("bar-chart").textContent = t(
+      "Data could not be loaded. Please reload or read the paper PDF.",
+      "数据未能加载，请刷新页面或阅读论文 PDF。",
+    );
+  });

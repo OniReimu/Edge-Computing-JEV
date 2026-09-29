@@ -2,6 +2,7 @@
 import csv
 import json
 import math
+import re
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlsplit, unquote
@@ -67,7 +68,7 @@ for path in SITE.rglob('*'):
             assert '/Users/' not in text, path
 for name in ('system-architecture.png', 'explorer-data.json', 'extended-data.json'):
     assert (SITE / 'assets' / name).is_file()
-assert f"a.href='{ARXIV}'" in (SITE / 'script.js').read_text()
+assert re.search(r"a\.href\s*=\s*[\"']" + re.escape(ARXIV) + r"[\"']", (SITE / "script.js").read_text())
 
 with (ROOT / 'experiments/rq1-rq4-interpretation/results/cells.csv').open() as f:
     interpretation = {(r['rq'], r['condition'], r['model']): r for r in csv.DictReader(f)}
