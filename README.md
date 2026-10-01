@@ -4,6 +4,7 @@ Code, benchmark, and results for the paper
 
 > **Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration**
 > Delong Li, Xu Wang, Haochen Gong, Rui Lang, and Guangsheng Yu. University of Technology Sydney.
+> arXiv: [2609.22753](https://arxiv.org/abs/2609.22753)
 
 The EdgeIntent v1 benchmark, the experiment results, and the raw per-request run records are on Hugging Face:
 [datasets/OniReimu/Edge-Computing-JEV](https://huggingface.co/datasets/OniReimu/Edge-Computing-JEV). The RQ4 DistilBERT
