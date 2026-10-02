@@ -1,0 +1,551 @@
+{
+  "input": {
+    "base": [
+      {
+        "model": "Jev-1.13.0",
+        "accuracy": 0.94,
+        "latency": 0.274,
+        "fee": 0.0365
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "accuracy": 0.64,
+        "latency": 0.124,
+        "fee": null
+      },
+      {
+        "model": "Laya",
+        "accuracy": 0.11,
+        "latency": 0.055,
+        "fee": null
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "accuracy": 0.99,
+        "latency": 0.378,
+        "fee": 0.09051
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "accuracy": 0.987,
+        "latency": 0.646,
+        "fee": 0.04048
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "accuracy": 0.96,
+        "latency": 1.774,
+        "fee": 0.03797
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "accuracy": 0.48,
+        "latency": 0.774,
+        "fee": null
+      }
+    ],
+    "512": [
+      {
+        "model": "Jev-1.13.0",
+        "accuracy": 0.923,
+        "latency": 0.276,
+        "fee": 0.06585
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "accuracy": 0.43,
+        "latency": 0.13,
+        "fee": null
+      },
+      {
+        "model": "Laya",
+        "accuracy": 0.01,
+        "latency": 0.062,
+        "fee": null
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "accuracy": 0.973,
+        "latency": 0.503,
+        "fee": 0.2534
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "accuracy": 0.973,
+        "latency": 0.72,
+        "fee": 0.1146
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "accuracy": 0.963,
+        "latency": 1.643,
+        "fee": 0.1462
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "accuracy": 0.413,
+        "latency": 0.768,
+        "fee": null
+      }
+    ],
+    "2048": [
+      {
+        "model": "Jev-1.13.0",
+        "accuracy": 0.917,
+        "latency": 0.286,
+        "fee": 0.1606
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "accuracy": 0.44,
+        "latency": 0.21,
+        "fee": null
+      },
+      {
+        "model": "Laya",
+        "accuracy": 0.013,
+        "latency": 0.073,
+        "fee": null
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "accuracy": 0.973,
+        "latency": 0.557,
+        "fee": 0.7535
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "accuracy": 0.97,
+        "latency": 0.689,
+        "fee": 0.3642
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "accuracy": 0.97,
+        "latency": 1.594,
+        "fee": 0.4526
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "accuracy": 0.297,
+        "latency": 0.857,
+        "fee": null
+      }
+    ],
+    "8192": [
+      {
+        "model": "Jev-1.13.0",
+        "accuracy": 0.91,
+        "latency": 0.343,
+        "fee": 0.5417
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "accuracy": 0.473,
+        "latency": 0.602,
+        "fee": null
+      },
+      {
+        "model": "Laya",
+        "accuracy": 0.023,
+        "latency": 0.093,
+        "fee": null
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "accuracy": 0.977,
+        "latency": 0.519,
+        "fee": 2.753
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "accuracy": 0.95,
+        "latency": 1.107,
+        "fee": 1.384
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "accuracy": 0.763,
+        "latency": 2.364,
+        "fee": 2.144
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "accuracy": 0.217,
+        "latency": 1.14,
+        "fee": null
+      }
+    ],
+    "16384": [
+      {
+        "model": "Jev-1.13.0",
+        "accuracy": 0.913,
+        "latency": 0.418,
+        "fee": 1.044
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "accuracy": 0.483,
+        "latency": 1.159,
+        "fee": null
+      },
+      {
+        "model": "Laya",
+        "accuracy": 0.017,
+        "latency": 0.137,
+        "fee": null
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "accuracy": 0.973,
+        "latency": 0.638,
+        "fee": 5.455
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "accuracy": 0.94,
+        "latency": 1.588,
+        "fee": 2.727
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "accuracy": 0.96,
+        "latency": 2.92,
+        "fee": 3.373
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "accuracy": 0.18,
+        "latency": 1.55,
+        "fee": null
+      }
+    ]
+  },
+  "catalog": {
+    "4": [
+      {
+        "model": "Jev-1.13.0",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.824,
+        "accuracy": 0.92,
+        "valid": 1.0,
+        "latency": 0.266
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "seen": 0.996,
+        "unseen": null,
+        "unsupported": 0.893,
+        "accuracy": 0.62,
+        "valid": 1.0,
+        "latency": 0.122
+      },
+      {
+        "model": "Laya",
+        "seen": 0.981,
+        "unseen": null,
+        "unsupported": 0.372,
+        "accuracy": 0.207,
+        "valid": 1.0,
+        "latency": 0.056
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.889,
+        "accuracy": 0.957,
+        "valid": 1.0,
+        "latency": 0.372
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "seen": 0.989,
+        "unseen": null,
+        "unsupported": 0.947,
+        "accuracy": 0.947,
+        "valid": 0.987,
+        "latency": 0.79
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "seen": 0.996,
+        "unseen": null,
+        "unsupported": 0.889,
+        "accuracy": 0.953,
+        "valid": 0.997,
+        "latency": 1.308
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.378,
+        "accuracy": 0.467,
+        "valid": 1.0,
+        "latency": 0.744
+      }
+    ],
+    "15": [
+      {
+        "model": "Jev-1.13.0",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.889,
+        "accuracy": 0.907,
+        "valid": 1.0,
+        "latency": 0.269
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "seen": 0.985,
+        "unseen": null,
+        "unsupported": 0.903,
+        "accuracy": 0.643,
+        "valid": 1.0,
+        "latency": 0.166
+      },
+      {
+        "model": "Laya",
+        "seen": 0.915,
+        "unseen": null,
+        "unsupported": 0.0,
+        "accuracy": 0.183,
+        "valid": 1.0,
+        "latency": 0.056
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 1.0,
+        "accuracy": 0.987,
+        "valid": 1.0,
+        "latency": 0.395
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "seen": 0.989,
+        "unseen": null,
+        "unsupported": 0.947,
+        "accuracy": 0.967,
+        "valid": 0.987,
+        "latency": 1.027
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "seen": 0.996,
+        "unseen": null,
+        "unsupported": 0.983,
+        "accuracy": 0.95,
+        "valid": 0.997,
+        "latency": 1.31
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "seen": 0.985,
+        "unseen": null,
+        "unsupported": 0.723,
+        "accuracy": 0.457,
+        "valid": 1.0,
+        "latency": 0.888
+      }
+    ],
+    "64": [
+      {
+        "model": "Jev-1.13.0",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.723,
+        "accuracy": 0.867,
+        "valid": 1.0,
+        "latency": 0.29
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "seen": 0.0,
+        "unseen": null,
+        "unsupported": 0.0,
+        "accuracy": 0.0,
+        "valid": 0.0,
+        "latency": 0.041
+      },
+      {
+        "model": "Laya",
+        "seen": 0.57,
+        "unseen": null,
+        "unsupported": 0.065,
+        "accuracy": 0.107,
+        "valid": 1.0,
+        "latency": 0.058
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.929,
+        "accuracy": 0.953,
+        "valid": 1.0,
+        "latency": 0.387
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.947,
+        "accuracy": 0.973,
+        "valid": 1.0,
+        "latency": 0.661
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "seen": 1.0,
+        "unseen": null,
+        "unsupported": 0.929,
+        "accuracy": 0.963,
+        "valid": 1.0,
+        "latency": 2.861
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "seen": 0.952,
+        "unseen": null,
+        "unsupported": 0.622,
+        "accuracy": 0.437,
+        "valid": 1.0,
+        "latency": 0.918
+      }
+    ],
+    "128": [
+      {
+        "model": "Jev-1.13.0",
+        "seen": 1.0,
+        "unseen": 1.0,
+        "unsupported": 0.723,
+        "accuracy": 0.887,
+        "valid": 1.0,
+        "latency": 0.305
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "seen": 0.0,
+        "unseen": 0.0,
+        "unsupported": 0.0,
+        "accuracy": 0.0,
+        "valid": 0.0,
+        "latency": 0.041
+      },
+      {
+        "model": "Laya",
+        "seen": 0.299,
+        "unseen": 0.449,
+        "unsupported": 0.0,
+        "accuracy": 0.083,
+        "valid": 1.0,
+        "latency": 0.064
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "seen": 1.0,
+        "unseen": 1.0,
+        "unsupported": 0.947,
+        "accuracy": 0.967,
+        "valid": 1.0,
+        "latency": 0.417
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "seen": 1.0,
+        "unseen": 1.0,
+        "unsupported": 0.909,
+        "accuracy": 0.963,
+        "valid": 1.0,
+        "latency": 1.009
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "seen": 1.0,
+        "unseen": 1.0,
+        "unsupported": 0.889,
+        "accuracy": 0.943,
+        "valid": 1.0,
+        "latency": 1.399
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "seen": 1.0,
+        "unseen": 0.978,
+        "unsupported": 0.824,
+        "accuracy": 0.417,
+        "valid": 1.0,
+        "latency": 0.971
+      }
+    ],
+    "254": [
+      {
+        "model": "Jev-1.13.0",
+        "seen": 1.0,
+        "unseen": 1.0,
+        "unsupported": 0.929,
+        "accuracy": 0.937,
+        "valid": 1.0,
+        "latency": 0.335
+      },
+      {
+        "model": "SemIf-Qwen3.5-4B",
+        "seen": 0.0,
+        "unseen": 0.0,
+        "unsupported": 0.0,
+        "accuracy": 0.0,
+        "valid": 0.0,
+        "latency": 0.041
+      },
+      {
+        "model": "Laya",
+        "seen": 0.0,
+        "unseen": 0.0,
+        "unsupported": 0.0,
+        "accuracy": 0.0,
+        "valid": 0.0,
+        "latency": 0.052
+      },
+      {
+        "model": "DeepSeek-V4.1-Flash",
+        "seen": 1.0,
+        "unseen": 0.995,
+        "unsupported": 1.0,
+        "accuracy": 0.97,
+        "valid": 1.0,
+        "latency": 0.498
+      },
+      {
+        "model": "GLM-5.3-Flash",
+        "seen": 1.0,
+        "unseen": 1.0,
+        "unsupported": 1.0,
+        "accuracy": 0.98,
+        "valid": 1.0,
+        "latency": 0.711
+      },
+      {
+        "model": "Qwen3.8-Flash",
+        "seen": 0.985,
+        "unseen": 1.0,
+        "unsupported": 0.983,
+        "accuracy": 0.963,
+        "valid": 1.0,
+        "latency": 1.795
+      },
+      {
+        "model": "Qwen3.5-4B-JSON",
+        "seen": 0.896,
+        "unseen": 0.921,
+        "unsupported": 0.933,
+        "accuracy": 0.493,
+        "valid": 1.0,
+        "latency": 1.059
+      }
+    ]
+  }
+}

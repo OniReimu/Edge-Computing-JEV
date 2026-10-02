@@ -23,6 +23,15 @@ that are configured for short, structured JSON output.
 The two experiments were pre-registered with hypotheses H1–H5 (RQ1–RQ4) and H6–H8 (RQ5). Their decision rules are
 described in Section 4.6 of the paper.
 
+## Interactive paper website
+
+The bilingual static website in [`docs/`](docs/) presents the study design and lets readers compare
+input length, contract width, admission load, deadlines, OCR cache conditions, and service catalogs.
+The paper buttons link to [arXiv:2609.22753](https://arxiv.org/pdf/2609.22753).
+
+Local preview and GitHub Pages setup are described in [`docs/README.md`](docs/README.md).
+After deployment, the intended site address is <https://onireimu.github.io/Edge-Computing-JEV/>.
+
 ## Repository layout
 
 ```
