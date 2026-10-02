@@ -164,7 +164,7 @@ CAPTIONS = {
     "fig_rq5b": "RQ5, real OCR service (Part~B). (a) Correct-completion rate with cache off (whiskers are 95\\% "
                 "confidence intervals) and (b) cache on across operational conditions: S steady, B bursty, C changing "
                 "text, R repeated text. (c) 95th percentile request latency $T$ on completions with cache off. "
-                "(d) Stacked mean time decomposition into admission wait, decision, and service execution for SC0. "
+                "(d) Stacked mean time decomposition into admission wait, decision, and service execution under steady arrivals with changing text and the cache off (SC0). "
                 "Model codes: JEV \\jev, SIF \\semif, LAY \\laya, DSK \\deepseek, GLM \\glm, Q38 \\qwenflash, "
                 "QJS \\qwenjson{} (ref.).",
     "tab_rq5a": "RQ5, modeled execution (Part~A). Primary completion rate and 95th percentile request latency $T$ on "
